@@ -1,130 +1,158 @@
-# Mr-IR0k-oo1 ⚡
+# Mr-IR0k-oo1
 
-![Profile Views](https://komarev.com/ghpvc/?username=Mr-IR0k-oo1&color=red)
-![GitHub followers](https://img.shields.io/github/followers/Mr-IR0k-oo1?style=flat)
-![GitHub stars](https://img.shields.io/github/stars/Mr-IR0k-oo1?style=flat)
+![Profile Views](https://komarev.com/ghpvc/?username=Mr-IR0k-oo1&label=Profile%20Views&color=0e75b6&style=flat)
+![GitHub Followers](https://img.shields.io/github/followers/Mr-IR0k-oo1?label=Followers&style=flat)
+![GitHub Stars](https://img.shields.io/github/stars/Mr-IR0k-oo1?label=Stars&style=flat)
 ![Linux](https://img.shields.io/badge/OS-Linux-black)
-![Security](https://img.shields.io/badge/Focus-Cybersecurity-critical)
+![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20AI-critical)
+![Status](https://img.shields.io/badge/Status-Building-success)
 
-> **Builder. Breaker. Systems thinker.**  
-> I don’t collect frameworks. I build things that work, break, or teach me why they failed.
-
----
-
-## 🧠 Who This Is For
-
-- Recruiters who want **signal**, not buzzwords  
-- Developers who value **clarity over hype**  
-- Security learners who want **real projects**, not tutorials  
-
-If you want “Hello World” repos, leave now.
+> **Systems-focused developer working at the intersection of AI, security, and full-stack engineering.**  
+> I prioritize correctness, reproducibility, and long-term maintainability over trends.
 
 ---
 
-## 🔥 What I Actually Do
+## 🧠 About
 
-- Build **AI assistants** with real integrations  
-- Create **cybersecurity learning systems**  
-- Ship **full-stack projects**, not UI demos  
-- Work primarily on **Linux**  
-- Prefer **clarity, performance, and security** over trends  
+- Focused on **AI systems**, **cybersecurity learning platforms**, and **backend engineering**
+- Linux-first workflow
+- Build-oriented mindset: design → implement → break → harden
+- Interested in real-world systems, not toy projects
 
 ---
 
-## 🚀 Flagship Projects
+## 📊 Activity & Productivity
+
+### 🔥 GitHub Streak
+![GitHub Streak](https://streak-stats.demolab.com?user=Mr-IR0k-oo1&theme=dark&hide_border=true)
+
+### 📈 GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mr-IR0k-oo1&show_icons=true&theme=dark&hide_border=true)
+
+### 🧮 Top Languages
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-IR0k-oo1&layout=compact&theme=dark&hide_border=true)
+
+### ⏱️ Productivity Peak Times
+![Productivity Graph](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Mr-IR0k-oo1&theme=github_dark)
+
+---
+
+## 🚀 Key Projects
 
 ### 🧠 VOX — Multi-Model AI Assistant
-**Repo:** `VOX_The_AI_MAN`
+**Repository:** `VOX_The_AI_MAN`
 
-A modular, voice-enabled AI assistant that supports **multiple LLM providers** and real-time web access.
+A modular AI assistant designed to work with **multiple LLM providers** and real-time web access.
 
-**Core Capabilities**
+**Highlights**
 - Multi-provider LLM routing (OpenAI, DeepSeek, Grok, Agentica)
 - Voice input/output (STT + TTS)
-- Real-time web retrieval
 - Docker-first deployment
-- API-driven architecture
+- REST API architecture
 
 **Stack**
-- Python · FastAPI · Docker · REST APIs
+- Python · FastAPI · Docker
 
-**Why it matters:**  
-Not a chatbot demo. A system designed to scale, swap models, and survive change.
+**Intent:**  
+Build an extensible AI system that survives model churn and scaling pressure.
 
 ---
 
 ### 🛡️ Website for Cybersecurity Enthusiasts
-**Repo:** `Website-for-cybersecurity-enthusiastic-person`
+**Repository:** `Website-for-cybersecurity-enthusiastic-person`
 
-An educational platform for cybersecurity learners.
+An educational platform focused on **core cybersecurity concepts**.
 
 **Features**
-- Structured security topics
+- Structured learning topics
 - Threat explanations
-- Learning-first layout
+- Clean, learner-first design
 - GitHub Pages deployment
 
 **Stack**
 - HTML · CSS · JavaScript · Bootstrap
 
-**Why it matters:**  
-Education without fluff. Built for learners who want foundations.
-
 ---
 
 ### 🌐 Portfolio Website
-**Repo:** `Portfolio`
+**Repository:** `Portfolio`
 
-Personal portfolio showcasing projects, skills, and direction.
+Personal portfolio showcasing projects and technical direction.
 
 **Stack**
 - HTML · CSS · TypeScript
 
-**Why it matters:**  
-Clean structure. Expandable. No unnecessary animation nonsense.
+**Design Goal:**  
+Minimal, readable, expandable — no unnecessary UI noise.
 
 ---
 
-## 🧰 Tech Stack (Real, Not Aspirational)
+## 🧰 Technical Stack
 
 ### Languages
 - Python
 - JavaScript / TypeScript
-- HTML / CSS
 - Bash
+- HTML / CSS
 
-### Backend
+### Backend & Systems
 - FastAPI
 - REST APIs
 - Docker
+- Linux
 
 ### Frontend
-- Vanilla JS
+- Vanilla JavaScript
 - Bootstrap
-- Static-first design
+- Static-first architectures
 
-### Security & Systems
-- Linux
+### Security Mindset
 - Web security fundamentals
-- Threat modeling mindset
+- Threat modeling
+- Defensive design
 
 ---
 
-## 📦 Repository Standards
+## 📦 Engineering Principles
 
-Every repo should eventually have:
-- Clear README
-- Defined purpose
-- Minimal dependencies
-- Reproducible setup
-- No dead code
-
-If it doesn’t meet this, it gets refactored or deleted.
+- Simplicity over cleverness
+- Security is mandatory, not optional
+- Every dependency is a liability
+- If it can’t be explained, it isn’t finished
 
 ---
 
-## 🛠️ Local Setup (General)
+## 🧭 Direction (Roadmap)
 
-```bash
-git clone https://github.com/Mr-IR0k-oo1/<repo>.git
-cd <repo>
+- Harden AI assistant architecture
+- Build security-focused tooling
+- Expand learning-by-building platforms
+- Improve observability and metrics
+
+No hype. Only execution.
+
+---
+
+## 🤝 Contributions
+
+Pull requests are welcome **if** they:
+- Improve clarity, security, or performance
+- Avoid unnecessary abstractions
+- Include rationale
+
+Low-effort changes will be ignored.
+
+---
+
+## 📬 Contact
+
+- GitHub: https://github.com/Mr-IR0k-oo1
+
+Be precise. Be technical.
+
+---
+
+## ⚠️ Note
+
+This profile reflects **active development**.  
+Expect refactors, deletions, and evolution.
