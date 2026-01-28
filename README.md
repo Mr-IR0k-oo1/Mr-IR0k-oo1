@@ -3,156 +3,167 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=Mr-IR0k-oo1&label=Profile%20Views&color=0e75b6&style=flat)
 ![GitHub Followers](https://img.shields.io/github/followers/Mr-IR0k-oo1?label=Followers&style=flat)
 ![GitHub Stars](https://img.shields.io/github/stars/Mr-IR0k-oo1?label=Stars&style=flat)
-![Linux](https://img.shields.io/badge/OS-Linux-black)
-![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20AI-critical)
-![Status](https://img.shields.io/badge/Status-Building-success)
+![Operating System](https://img.shields.io/badge/OS-Linux-black)
+![Primary Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20AI-critical)
+![Development Status](https://img.shields.io/badge/Status-Actively%20Building-success)
 
-> **Systems-focused developer working at the intersection of AI, security, and full-stack engineering.**  
-> I prioritize correctness, reproducibility, and long-term maintainability over trends.
-
----
-
-## 🧠 About
-
-- Focused on **AI systems**, **cybersecurity learning platforms**, and **backend engineering**
-- Linux-first workflow
-- Build-oriented mindset: design → implement → break → harden
-- Interested in real-world systems, not toy projects
+> **Systems-focused developer with an execution-first mindset.**  
+> Correctness, security, and consistency take priority over trends and noise.
 
 ---
 
-## 📊 Activity & Productivity
+## About
 
-### 🔥 GitHub Streak
+- Linux-first development workflow  
+- Focus areas: AI systems, cybersecurity, backend engineering  
+- Iterative loop: build → test → break → harden  
+- Preference for simple, explainable architectures  
+
+---
+
+## Productivity Snapshot (Live)
+
+All metrics below are **real-time**, API-driven, and auto-updated.
+
+### Development Activity
+![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-IR0k-oo1&theme=github_dark)
+
+---
+
+### Commit Consistency
 ![GitHub Streak](https://streak-stats.demolab.com?user=Mr-IR0k-oo1&theme=dark&hide_border=true)
 
-### 📈 GitHub Stats
+---
+
+### Repository Statistics
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mr-IR0k-oo1&show_icons=true&theme=dark&hide_border=true)
 
-### 🧮 Top Languages
+---
+
+### Language Distribution
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-IR0k-oo1&layout=compact&theme=dark&hide_border=true)
 
-### ⏱️ Productivity Peak Times
-![Productivity Graph](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Mr-IR0k-oo1&theme=github_dark)
+---
+
+### Productivity Peak Analysis
+![Productive Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Mr-IR0k-oo1&theme=github_dark)
 
 ---
 
-## 🚀 Key Projects
+## Coding Time (WakaTime)
 
-### 🧠 VOX — Multi-Model AI Assistant
-**Repository:** `VOX_The_AI_MAN`
+> Measures **actual hours coded**, not commit noise.
 
-A modular AI assistant designed to work with **multiple LLM providers** and real-time web access.
+![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=YOUR_WAKATIME_USERNAME&theme=dark&hide_border=true)
 
-**Highlights**
-- Multi-provider LLM routing (OpenAI, DeepSeek, Grok, Agentica)
-- Voice input/output (STT + TTS)
-- Docker-first deployment
-- REST API architecture
-
-**Stack**
-- Python · FastAPI · Docker
-
-**Intent:**  
-Build an extensible AI system that survives model churn and scaling pressure.
+**Note:** Replace `YOUR_WAKATIME_USERNAME` after linking WakaTime to GitHub.
 
 ---
 
-### 🛡️ Website for Cybersecurity Enthusiasts
-**Repository:** `Website-for-cybersecurity-enthusiastic-person`
+## CI / Security Posture
 
-An educational platform focused on **core cybersecurity concepts**.
+These badges represent **expected standards** applied across repositories.
 
-**Features**
-- Structured learning topics
-- Threat explanations
-- Clean, learner-first design
-- GitHub Pages deployment
+![CI](https://img.shields.io/badge/CI-Automated-success)
+![Security](https://img.shields.io/badge/Security-Reviewed-critical)
+![Code Quality](https://img.shields.io/badge/Code%20Quality-Strict-informational)
+![Dependencies](https://img.shields.io/badge/Dependencies-Minimized-blue)
+![License](https://img.shields.io/badge/License-Proprietary-lightgrey)
 
-**Stack**
-- HTML · CSS · JavaScript · Bootstrap
+**Practices**
+- Automated checks (linting, build validation)
+- Security-first dependency selection
+- Minimal surface area by design
+- Explicit licensing
 
----
-
-### 🌐 Portfolio Website
-**Repository:** `Portfolio`
-
-Personal portfolio showcasing projects and technical direction.
-
-**Stack**
-- HTML · CSS · TypeScript
-
-**Design Goal:**  
-Minimal, readable, expandable — no unnecessary UI noise.
+(Repo-level CI and security workflows are enforced individually.)
 
 ---
 
-## 🧰 Technical Stack
+## Public Metrics Dashboard
 
-### Languages
-- Python
-- JavaScript / TypeScript
-- Bash
-- HTML / CSS
+> A dedicated dashboard providing **transparent, real-time development metrics**, inspired by internal engineering analytics.
+
+**Live Dashboard (Concept)**
+- Commit velocity
+- Language usage trends
+- Productivity peaks (day/time)
+- Repository health indicators
+
+**Planned Implementation**
+- Static frontend (GitHub Pages)
+- GitHub API + caching
+- Public, read-only metrics
+- No vanity stats
+
+**Status:** In progress
+
+(This dashboard mirrors the format shown in the referenced screenshot.)
+
+---
+
+## Technical Stack
+
+### Programming Languages
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
 
 ### Backend & Systems
-- FastAPI
-- REST APIs
-- Docker
-- Linux
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+![REST](https://img.shields.io/badge/REST-API-informational)
 
 ### Frontend
-- Vanilla JavaScript
-- Bootstrap
-- Static-first architectures
+![Vanilla JS](https://img.shields.io/badge/JavaScript-Vanilla-yellow)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Static--First-blue)
 
-### Security Mindset
-- Web security fundamentals
-- Threat modeling
-- Defensive design
-
----
-
-## 📦 Engineering Principles
-
-- Simplicity over cleverness
-- Security is mandatory, not optional
-- Every dependency is a liability
-- If it can’t be explained, it isn’t finished
+### Security Orientation
+![Web Security](https://img.shields.io/badge/Web-Security-critical)
+![Threat Modeling](https://img.shields.io/badge/Threat-Modeling-important)
+![Defensive Design](https://img.shields.io/badge/Design-Defensive-success)
 
 ---
 
-## 🧭 Direction (Roadmap)
+## Engineering Principles
 
-- Harden AI assistant architecture
-- Build security-focused tooling
-- Expand learning-by-building platforms
-- Improve observability and metrics
-
-No hype. Only execution.
+- Clarity over cleverness  
+- Security is non-negotiable  
+- Dependencies are liabilities  
+- If it cannot be explained, it is incomplete  
 
 ---
 
-## 🤝 Contributions
+## Direction
 
-Pull requests are welcome **if** they:
-- Improve clarity, security, or performance
-- Avoid unnecessary abstractions
-- Include rationale
-
-Low-effort changes will be ignored.
+- Improve execution consistency  
+- Harden systems before expanding scope  
+- Reduce noise, increase signal  
+- Optimize for depth, not breadth  
 
 ---
 
-## 📬 Contact
+## Contributions
 
-- GitHub: https://github.com/Mr-IR0k-oo1
-
-Be precise. Be technical.
+Pull requests are accepted **only if** they:
+- Improve clarity, security, or performance  
+- Avoid unnecessary abstractions  
+- Include clear technical justification  
 
 ---
 
-## ⚠️ Note
+## Contact
 
-This profile reflects **active development**.  
-Expect refactors, deletions, and evolution.
+- GitHub: https://github.com/Mr-IR0k-oo1  
+
+---
+
+## Notice
+
+This profile represents **active iteration and evolution**.  
+Refactors, deletions, and restructuring are expected.
