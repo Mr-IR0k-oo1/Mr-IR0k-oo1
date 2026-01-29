@@ -15,9 +15,9 @@
 ## About
 
 - Linux-first development workflow  
-- Focus areas: AI systems, cybersecurity, backend engineering  
+- Focus areas: AI systems, cybersecurity, backend engineering, systems programming  
 - Iterative loop: build → test → break → harden  
-- Preference for simple, explainable architectures  
+- Preference for simple, explainable, memory-safe architectures  
 
 ---
 
@@ -56,13 +56,9 @@ All metrics below are **real-time**, API-driven, and auto-updated.
 
 ![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=YOUR_WAKATIME_USERNAME&theme=dark&hide_border=true)
 
-**Note:** Replace `YOUR_WAKATIME_USERNAME` after linking WakaTime to GitHub.
-
 ---
 
 ## CI / Security Posture
-
-These badges represent **expected standards** applied across repositories.
 
 ![CI](https://img.shields.io/badge/CI-Automated-success)
 ![Security](https://img.shields.io/badge/Security-Reviewed-critical)
@@ -70,41 +66,12 @@ These badges represent **expected standards** applied across repositories.
 ![Dependencies](https://img.shields.io/badge/Dependencies-Minimized-blue)
 ![License](https://img.shields.io/badge/License-Proprietary-lightgrey)
 
-**Practices**
-- Automated checks (linting, build validation)
-- Security-first dependency selection
-- Minimal surface area by design
-- Explicit licensing
-
-(Repo-level CI and security workflows are enforced individually.)
-
----
-
-## Public Metrics Dashboard
-
-> A dedicated dashboard providing **transparent, real-time development metrics**, inspired by internal engineering analytics.
-
-**Live Dashboard (Concept)**
-- Commit velocity
-- Language usage trends
-- Productivity peaks (day/time)
-- Repository health indicators
-
-**Planned Implementation**
-- Static frontend (GitHub Pages)
-- GitHub API + caching
-- Public, read-only metrics
-- No vanity stats
-
-**Status:** In progress
-
-(This dashboard mirrors the format shown in the referenced screenshot.)
-
 ---
 
 ## Technical Stack
 
 ### Programming Languages
+![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
@@ -113,6 +80,7 @@ These badges represent **expected standards** applied across repositories.
 ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
 
 ### Backend & Systems
+![Rust](https://img.shields.io/badge/Systems-Rust--First-black)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
@@ -124,6 +92,7 @@ These badges represent **expected standards** applied across repositories.
 ![Architecture](https://img.shields.io/badge/Architecture-Static--First-blue)
 
 ### Security Orientation
+![Memory Safety](https://img.shields.io/badge/Memory-Safe-success)
 ![Web Security](https://img.shields.io/badge/Web-Security-critical)
 ![Threat Modeling](https://img.shields.io/badge/Threat-Modeling-important)
 ![Defensive Design](https://img.shields.io/badge/Design-Defensive-success)
@@ -132,7 +101,8 @@ These badges represent **expected standards** applied across repositories.
 
 ## Engineering Principles
 
-- Clarity over cleverness  
+- Correctness before performance  
+- Performance before convenience  
 - Security is non-negotiable  
 - Dependencies are liabilities  
 - If it cannot be explained, it is incomplete  
@@ -141,10 +111,10 @@ These badges represent **expected standards** applied across repositories.
 
 ## Direction
 
-- Improve execution consistency  
-- Harden systems before expanding scope  
+- Increase execution consistency  
+- Ship more Rust-based systems  
+- Harden architectures before scaling  
 - Reduce noise, increase signal  
-- Optimize for depth, not breadth  
 
 ---
 
@@ -165,5 +135,5 @@ Pull requests are accepted **only if** they:
 
 ## Notice
 
-This profile represents **active iteration and evolution**.  
-Refactors, deletions, and restructuring are expected.
+This profile reflects **active iteration and hardening**.  
+Expect refactors, deletions, and restructuring.
