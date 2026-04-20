@@ -3,137 +3,76 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=Mr-IR0k-oo1&label=Profile%20Views&color=0e75b6&style=flat)
 ![GitHub Followers](https://img.shields.io/github/followers/Mr-IR0k-oo1?label=Followers&style=flat)
 ![GitHub Stars](https://img.shields.io/github/stars/Mr-IR0k-oo1?label=Stars&style=flat)
-![Operating System](https://img.shields.io/badge/OS-Linux-black)
-![Primary Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20AI-critical)
-![Development Status](https://img.shields.io/badge/Status-Actively%20Building-success)
+![OS](https://img.shields.io/badge/OS-Linux-black)
+![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20AI-critical)
+![Status](https://img.shields.io/badge/Status-Actively%20Building-success)
 
-> **Systems-focused developer with an execution-first mindset.**  
-> Correctness, security, and consistency take priority over trends and noise.
-
----
-
-## About
-
-- Linux-first development workflow  
-- Focus areas: AI systems, cybersecurity, backend engineering, systems programming  
-- Iterative loop: build → test → break → harden  
-- Preference for simple, explainable, memory-safe architectures  
+> **Systems-focused developer.**  
+> Correctness, security, and consistency > trends.
 
 ---
 
-## Productivity Snapshot (Live)
+## 📍 About
 
-All metrics below are **real-time**, API-driven, and auto-updated.
-
-### Development Activity
-![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-IR0k-oo1&theme=github_dark)
-
----
-
-### Commit Consistency
-![GitHub Streak](https://streak-stats.demolab.com?user=Mr-IR0k-oo1&theme=dark&hide_border=true)
+- Linux-first, minimal & hardened workflow  
+- Core focus: AI systems, cybersecurity, backend & systems programming  
+- Build → test → break → harden  
+- Simple, explainable, memory-safe architectures only
 
 ---
 
-### Repository Statistics
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mr-IR0k-oo1&show_icons=true&theme=dark&hide_border=true)
-
----
-
-### Language Distribution
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-IR0k-oo1&layout=compact&theme=dark&hide_border=true)
-
----
-
-### Productivity Peak Analysis
-![Productive Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Mr-IR0k-oo1&theme=github_dark)
-
----
-
-## Coding Time (WakaTime)
-
-> Measures **actual hours coded**, not commit noise.
-
-![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=YOUR_WAKATIME_USERNAME&theme=dark&hide_border=true)
-
----
-
-## CI / Security Posture
+## 🛡️ Security Posture
 
 ![CI](https://img.shields.io/badge/CI-Automated-success)
 ![Security](https://img.shields.io/badge/Security-Reviewed-critical)
-![Code Quality](https://img.shields.io/badge/Code%20Quality-Strict-informational)
+![Quality](https://img.shields.io/badge/Code%20Quality-Strict-informational)
 ![Dependencies](https://img.shields.io/badge/Dependencies-Minimized-blue)
 ![License](https://img.shields.io/badge/License-Proprietary-lightgrey)
 
 ---
 
-## Technical Stack
+## 🧰 Technical Stack
 
-### Programming Languages
+**Languages**  
 ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
 
-### Backend & Systems
-![Rust](https://img.shields.io/badge/Systems-Rust--First-black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
-![REST](https://img.shields.io/badge/REST-API-informational)
+**Core**  
+Rust-first • FastAPI • Docker • Linux • REST
 
-### Frontend
-![Vanilla JS](https://img.shields.io/badge/JavaScript-Vanilla-yellow)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
-![Architecture](https://img.shields.io/badge/Architecture-Static--First-blue)
-
-### Security Orientation
-![Memory Safety](https://img.shields.io/badge/Memory-Safe-success)
-![Web Security](https://img.shields.io/badge/Web-Security-critical)
-![Threat Modeling](https://img.shields.io/badge/Threat-Modeling-important)
-![Defensive Design](https://img.shields.io/badge/Design-Defensive-success)
+**Security**  
+Memory-safe • Defensive design • Threat modeling
 
 ---
 
-## Engineering Principles
+## ⚡ Principles
 
 - Correctness before performance  
 - Performance before convenience  
 - Security is non-negotiable  
-- Dependencies are liabilities  
-- If it cannot be explained, it is incomplete  
+- Minimize dependencies  
+- If it can’t be explained simply, it’s incomplete  
+
+**Direction**  
+Ship more Rust systems • Harden before scaling • Increase signal, reduce noise.
 
 ---
 
-## Direction
+## 🤝 Contributions
 
-- Increase execution consistency  
-- Ship more Rust-based systems  
-- Harden architectures before scaling  
-- Reduce noise, increase signal  
+Pull requests accepted **only if** they improve clarity, security or performance and include clear justification.
 
 ---
 
-## Contributions
+## 📬 Contact
 
-Pull requests are accepted **only if** they:
-- Improve clarity, security, or performance  
-- Avoid unnecessary abstractions  
-- Include clear technical justification  
+**GitHub**: [Mr-IR0k-oo1](https://github.com/Mr-IR0k-oo1)
 
 ---
 
-## Contact
+## 🔄 Notice
 
-- GitHub: https://github.com/Mr-IR0k-oo1  
-
----
-
-## Notice
-
-This profile reflects **active iteration and hardening**.  
-Expect refactors, deletions, and restructuring.
+Active iteration & hardening in progress. Expect refactors.
