@@ -15,6 +15,20 @@
 
 <br/>
 
+<h3><code>Mr-IR0k-oo1@github ~ $ ./contributions.sh</code></h3>
+<div align="center">
+<img src="./contrib-heatmap.svg" width="910" />
+</div>
+
+<br/>
+
+<h3><code>Mr-IR0k-oo1@github ~ $ whoami</code></h3>
+<div align="center">
+<img src="./info-card.svg" width="490" />
+</div>
+
+<br/>
+
 ## About
 
 I build systems-level software where correctness and security aren't negotiable — primarily in Rust, with a focus on cybersecurity tooling, backend infrastructure, and AI systems. My workflow is Linux-first, minimal, and hardened by default.
