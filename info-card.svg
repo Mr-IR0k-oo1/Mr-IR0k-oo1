@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="272" viewBox="0 0 490 272">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  </style>
+  <rect width="490" height="272" rx="10" fill="#1e1e2e" stroke="#313244" stroke-width="1"/>
+  <rect x="0" y="0" width="490" height="38" rx="10" fill="#313244"/>
+  <rect x="0" y="28" width="490" height="10" fill="#313244"/>
+  <circle cx="18" cy="19" r="5" fill="#f38ba8"/>
+  <circle cx="36" cy="19" r="5" fill="#f9e2af"/>
+  <circle cx="54" cy="19" r="5" fill="#a6e3a1"/>
+  <text x="28" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="bold" fill="#f5c2e7">Mr-IR0k-oo1@github</text>
+    <text x="28" y="76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#6c7086">──────────────────────────────────────</text>
+    <text x="28" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="0.6s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">     Now</tspan>  Building CVE scanning engine &amp; WiFi diagnostics</tspan></text>
+    <text x="28" y="128" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="0.85s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">   Focus</tspan>  Systems · Security · AI infra · Embedded/RF</tspan></text>
+    <text x="28" y="156" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="1.1s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">   Stack</tspan>  Rust · Python · TypeScript · Bash</tspan></text>
+    <text x="28" y="184" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="1.35s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">      OS</tspan>  Linux (Arch)</tspan></text>
+    <text x="28" y="212" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="1.6s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">  Editor</tspan>  Neovim + tmux</tspan></text>
+    <text x="28" y="240" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+        begin="1.85s" dur="0.4s" fill="freeze"/>
+><tspan opacity="0"><tspan font-weight="bold" fill="#89b4fa">   Shell</tspan>  bash</tspan></text>
+</svg>
