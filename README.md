@@ -17,15 +17,18 @@
 
 <h3><code>Mr-IR0k-oo1@github ~ $ ./contributions.sh</code></h3>
 <div align="center">
-<img src="./contrib-heatmap.svg" width="910" />
+<img src="./contrib-heatmap.svg" width="946" />
 </div>
 
 <br/>
 
-<h3><code>Mr-IR0k-oo1@github ~ $ whoami</code></h3>
-<div align="center">
-<img src="./info-card.svg" width="490" />
-</div>
+<h3><code>Mr-IR0k-oo1@github ~ $ neofetch</code></h3>
+<table>
+  <tr>
+    <td valign="top"><img src="./info-card.svg" width="490" /></td>
+    <td valign="top"><img src="./workspace-card.svg" width="490" /></td>
+  </tr>
+</table>
 
 <br/>
 
@@ -55,17 +58,6 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 
 <br/>
 
-## Focus Areas
-
-| Area | Details |
-|---|---|
-| **Systems programming** | Rust-first, workspace architectures, local-first storage |
-| **Cybersecurity** | Vulnerability scanning, CVE correlation, threat intelligence tooling |
-| **AI infrastructure** | Agent orchestration, memory systems, terminal-native tooling |
-| **Embedded / RF** | ESP8266, signal processing, protocol-level diagnostics |
-
-<br/>
-
 ## Stack
 
 <div>
@@ -87,22 +79,6 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
 
 </div>
-
-<br/>
-
-## Selected Work
-
-**CVE Scanning Engine** — Rust
-A workspace of scanner and correlation crates that cross-references vulnerability data (NVD, EPSS) against discovered assets, producing a locally-stored, explainable risk score. Built for correctness of correlation over raw scan speed.
-
-**WiFi Diagnostic Toolkit** — ESP8266 / Python
-A passive 802.11 packet sniffer streaming raw frames over serial into a Python/pcap pipeline. Feeds channel scanning, network inventory, and rogue-AP detection into standard tools like Wireshark rather than reinventing analysis.
-
-**AI Orchestration Layer** — Rust / Ratatui
-A terminal-based memory and orchestration layer that gives multiple AI CLIs (Claude Code, Copilot, Gemini, Ollama) a shared, persistent context instead of siloed sessions.
-
-**SDR / Satellite Tracking** — Rust
-Signal-processing and orbital-propagation tooling (SGP4, polyphase filterbank IQ pipelines) built as a multi-crate system, aimed at full-catalog satellite tracking with SIMD-accelerated signal handling.
 
 <br/>
 
