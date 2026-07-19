@@ -1,42 +1,7 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-07-18",
+  "fetched_at": "2026-07-19",
   "days": [
-    {
-      "date": "2025-07-13",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-14",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-15",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-16",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-17",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-18",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-07-19",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-07-20",
       "level": 0,
@@ -1854,13 +1819,18 @@
     },
     {
       "date": "2026-07-18",
+      "level": 2,
+      "count": 5
+    },
+    {
+      "date": "2026-07-19",
       "level": 1,
       "count": 2
     }
   ],
   "stats": {
-    "total": 778,
-    "current_streak": 1,
+    "total": 785,
+    "current_streak": 2,
     "longest_streak": 20,
     "best_day": {
       "date": "2025-09-15",
@@ -1879,7 +1849,7 @@
       "2026-04": 85,
       "2026-05": 75,
       "2026-06": 133,
-      "2026-07": 78
+      "2026-07": 83
     }
   }
 }
