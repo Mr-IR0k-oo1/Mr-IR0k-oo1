@@ -11,7 +11,7 @@
   <circle cx="54" cy="17" r="5" fill="#a6e3a1"/>
   <text x="473" y="22" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#6c7086">contributions — 52 weeks</text>
   <text x="18" y="64" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#a6e3a1">$ git log --oneline --since="52 weeks ago" | wc -l</text>
-  <text x="18" y="82" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#cdd6f4" opacity="0">844<animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.3s" fill="freeze"/></text>
+  <text x="18" y="82" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#cdd6f4" opacity="0">849<animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.3s" fill="freeze"/></text>
   <text x="18" y="153" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086" text-anchor="start">Mon</text>
   <text x="18" y="185" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086" text-anchor="start">Wed</text>
   <text x="18" y="217" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086" text-anchor="start">Fri</text>
@@ -402,8 +402,8 @@
   <rect x="902" y="142" width="13" height="13" rx="2.5" fill="#0e4429" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.216s" dur="0.3s" fill="freeze"/></rect>
   <rect x="902" y="158" width="13" height="13" rx="2.5" fill="#0e4429" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.219s" dur="0.3s" fill="freeze"/></rect>
   <rect x="902" y="174" width="13" height="13" rx="2.5" fill="#006d32" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.222s" dur="0.3s" fill="freeze"/></rect>
-  <rect x="902" y="190" width="13" height="13" rx="2.5" fill="#161b22" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.225s" dur="0.3s" fill="freeze"/></rect>
-  <rect x="902" y="206" width="13" height="13" rx="2.5" fill="#161b22" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.228s" dur="0.3s" fill="freeze"/></rect>
+  <rect x="902" y="190" width="13" height="13" rx="2.5" fill="#0e4429" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.225s" dur="0.3s" fill="freeze"/></rect>
+  <rect x="902" y="206" width="13" height="13" rx="2.5" fill="#0e4429" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.228s" dur="0.3s" fill="freeze"/></rect>
   <rect x="902" y="222" width="13" height="13" rx="2.5" fill="#161b22" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.231s" dur="0.3s" fill="freeze"/></rect>
   <text x="54" y="256" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086">Less</text>
   <rect x="92" y="246" width="13" height="13" rx="2.5" fill="#161b22"/>
@@ -413,5 +413,5 @@
   <rect x="156" y="246" width="13" height="13" rx="2.5" fill="#39d353"/>
   <rect x="172" y="246" width="13" height="13" rx="2.5" fill="#69f0ae"/>
   <text x="194" y="256" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086">More</text>
-  <text x="54" y="276" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086" opacity="0">current streak: 0d  ·  longest: 20d<animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.4s" fill="freeze"/></text>
+  <text x="54" y="276" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#6c7086" opacity="0">current streak: 15d  ·  longest: 20d<animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.4s" fill="freeze"/></text>
 </svg>
