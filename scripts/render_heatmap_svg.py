@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render contributions.json into an animated heatmap SVG wrapped in a terminal window."""
+"""Render contributions.json into a highly-engineered, industrial-brutalist animated heatmap SVG with tactical telemetry aesthetics."""
 
 import json
 import os
@@ -7,32 +7,41 @@ from datetime import date, timedelta
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
-# --- Catppuccin Mocha palette ---
-BG      = "#1e1e2e"
-SURFACE = "#313244"
-DIM     = "#6c7086"
-TEXT    = "#cdd6f4"
-RED     = "#f38ba8"
-YELLOW  = "#f9e2af"
-GREEN   = "#a6e3a1"
-BLUE    = "#89b4fa"
-TEAL    = "#94e2d5"
+# --- Tactical Telemetry Palette (Consistent with other cards) ---
+BG            = "#0B0C10"  # Deep space/charcoal technical background
+BORDER        = "#1F2430"  # Dark steel grid line
+BORDER_BRIGHT = "#3F4D66"  # Active frame highlight
+TEXT          = "#E2E8F0"  # Crisp off-white phosphor text
+DIM           = "#5A6578"  # Blueprint slate gray for metadata
 
-# GitHub-ish green ramp: level 0-5
-HEAT_PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0ae"]
+# Accent Colors
+RED           = "#FF3E3E"  # Aviation hazard / alarm red
+GREEN         = "#00FF66"  # Matrix phosphor active green
+BLUE          = "#00F0FF"  # Hyper-cyber blue/teal
+AMBER         = "#FFB700"  # Tactical warning amber
+
+# Tactical Monochromatic Green Heat Palette representing different contribution intensities
+HEAT_PALETTE = [
+    "#12151D",  # Level 0: Inactive deep charcoal
+    "#0D3A1F",  # Level 1: Low-intensity phosphor
+    "#145E32",  # Level 2: Medium-low intensity
+    "#218C4A",  # Level 3: Medium-high intensity
+    "#2DBC62",  # Level 4: High-intensity active
+    "#00FF66"   # Level 5: Maximum activity glow
+]
 
 CELL   = 13
 GAP    = 3
-RADIUS = 2.5
+RADIUS = 1.0  # Ultra-sharp modular corners (rx=1.0)
 PAD_L  = 36
-PAD_T  = 30
+PAD_T  = 20
 MONTHS = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 DAYS_LABELS = ["", "Mon", "", "Wed", "", "Fri", ""]
 
-# Terminal chrome
-BAR_H  = 34
-WIN_PAD = 16  # padding inside the terminal window
+# Terminal dimensions & layout
+BAR_H   = 26
+WIN_PAD = 20
 
 
 def load_data() -> dict:
@@ -71,56 +80,82 @@ def render_svg(data: dict) -> str:
 
     num_cols = max(len(row) for row in grid)
 
-    # Inner heatmap dimensions
+    # Calculate inner dimensions dynamically but robustly
     heat_w = PAD_L + num_cols * (CELL + GAP) + 10
-    heat_h = PAD_T + 7 * (CELL + GAP) + 50
+    W = heat_w + WIN_PAD * 2
+    
+    # Calculate height based on strict grid and telemetry blocks
+    # Header space: BAR_H (26)
+    # Inside margins: WIN_PAD (20)
+    # Shell prompt space: 42
+    # Grid offset padding: PAD_T (20)
+    # Grid height: 7 * 16 = 112
+    # Legend offset: 18
+    # Legend height: 13
+    # Stats block: 34
+    # Footer space: BAR_H (26) + margins
+    H = 295  # Standardized stable height for 52-week matrix console
 
-    # Total SVG dimensions (terminal window)
-    inner_w = heat_w + WIN_PAD * 2
-    inner_h = BAR_H + heat_h + WIN_PAD * 2
-    W = inner_w + 4  # outer stroke
-    H = inner_h + 4
-
-    # Offsets for content inside the terminal
-    ox = 2 + WIN_PAD
-    oy = 2 + BAR_H + WIN_PAD
+    ox = WIN_PAD
+    oy = BAR_H + WIN_PAD
 
     parts = []
 
-    # --- Terminal window ---
-    parts.append(f'<rect width="{W}" height="{H}" rx="10" fill="{BG}" stroke="{SURFACE}" stroke-width="1"/>')
-    parts.append(f'<rect width="{W}" height="{BAR_H}" rx="10" fill="{SURFACE}"/>')
-    parts.append(f'<rect y="24" width="{W}" height="10" fill="{SURFACE}"/>')
-    parts.append(f'<circle cx="18" cy="{BAR_H//2}" r="5" fill="{RED}"/>')
-    parts.append(f'<circle cx="36" cy="{BAR_H//2}" r="5" fill="{YELLOW}"/>')
-    parts.append(f'<circle cx="54" cy="{BAR_H//2}" r="5" fill="{GREEN}"/>')
+    # --- Container and main grid ---
+    # Draw solid 90-degree outer container with razor-sharp border
+    parts.append(f'<rect width="{W}" height="{H}" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>')
+
+    # Blueprint Grid Lines
+    parts.append(f'<line x1="0" y1="26" x2="{W}" y2="26" stroke="{BORDER}" stroke-width="1"/>')
+    parts.append(f'<line x1="0" y1="{H - 26}" x2="{W}" y2="{H - 26}" stroke="{BORDER}" stroke-width="1"/>')
+
+    # Corner registration crosshairs (+)
+    parts.append(f'<text x="6" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    parts.append(f'<text x="{W - 13}" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    parts.append(f'<text x="6" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    parts.append(f'<text x="{W - 13}" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+
+    # --- Header bar contents ---
+    # Flashing system status square
     parts.append(
-        f'<text x="{W//2}" y="{BAR_H//2 + 5}" text-anchor="middle" '
-        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="12" fill="{DIM}">contributions — 52 weeks</text>'
+        f'<rect x="20" y="10" width="6" height="6" fill="{GREEN}">'
+        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'</rect>'
     )
+    parts.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="{GREEN}">[ CONSOLE: BASHLOG ]</text>')
+
+    # Centered telemetry indicator
+    parts.append(
+        f'<text x="{W//2}" y="16" text-anchor="middle" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'STREAM: SYSTEM_ACTIVITY_INDEX // 52_WEEK_MATRIX'
+        f'</text>'
+    )
+
+    # Right side security warning
+    parts.append(f'<text x="{W - 20}" y="16" text-anchor="end" font-size="9" fill="{RED}" font-weight="bold">INGEST_STATE: ONLINE</text>')
 
     # --- Shell prompt ---
     prompt_y = oy + 12
     parts.append(
         f'<text x="{ox}" y="{prompt_y}" '
         f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="11" fill="{GREEN}">'
-        f'$ git log --oneline --since="52 weeks ago" | wc -l</text>'
+        f'font-size="11" fill="{BLUE}">'
+        f'mr-ir0k-oo1@mainframe:~$ git log --since="52 weeks ago" | wc -l</text>'
     )
-    prompt_y += 18
+    
+    prompt_y += 16
     total = stats.get("total", 0)
     parts.append(
         f'<text x="{ox}" y="{prompt_y}" '
         f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="12" fill="{TEXT}" opacity="0">'
-        f'{total:,}'
-        f'<animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.3s" fill="freeze"/>'
+        f'font-size="12" fill="{GREEN}" font-weight="bold" opacity="0">'
+        f'[+] {total:,} INGESTED LOGS DETECTED'
+        f'<animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.2s" fill="freeze"/>'
         f'</text>'
     )
 
     # Offset heatmap below the prompt
-    grid_oy = oy + 44
+    grid_oy = oy + 36
 
     # --- Day labels ---
     for i, label in enumerate(DAYS_LABELS):
@@ -129,7 +164,7 @@ def render_svg(data: dict) -> str:
             parts.append(
                 f'<text x="{ox}" y="{y}" '
                 f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-                f'font-size="10" fill="{DIM}" text-anchor="start">{label}</text>'
+                f'font-size="9.5" fill="{DIM}" text-anchor="start" font-weight="bold">{label}</text>'
             )
 
     # --- Month labels ---
@@ -147,10 +182,10 @@ def render_svg(data: dict) -> str:
             parts.append(
                 f'<text x="{x}" y="{y}" '
                 f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-                f'font-size="10" fill="{DIM}">{MONTHS[m]}</text>'
+                f'font-size="9.5" fill="{DIM}" font-weight="bold">{MONTHS[m].upper()}</text>'
             )
 
-    # --- Cells ---
+    # --- Heatmap Cells ---
     cell_idx = 0
     for col in range(num_cols):
         for row in range(7):
@@ -160,13 +195,16 @@ def render_svg(data: dict) -> str:
 
             x = ox + PAD_L + col * (CELL + GAP)
             y = grid_oy + PAD_T + row * (CELL + GAP)
-            delay = 0.1 + cell_idx * 0.003
+            
+            # Fast, sequential cascade loading effect
+            delay = 0.05 + cell_idx * 0.002
 
+            # Use razor-sharp corners rx=RADIUS
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
                 f'rx="{RADIUS}" fill="{fill}" opacity="0">'
                 f'<animate attributeName="opacity" from="0" to="1" '
-                f'begin="{delay:.3f}s" dur="0.3s" fill="freeze"/>'
+                f'begin="{delay:.3f}s" dur="0.15s" fill="freeze"/>'
                 f'</rect>'
             )
             cell_idx += 1
@@ -177,7 +215,7 @@ def render_svg(data: dict) -> str:
     parts.append(
         f'<text x="{legend_x}" y="{legend_y}" '
         f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="10" fill="{DIM}">Less</text>'
+        f'font-size="9.5" fill="{DIM}" font-weight="bold">LESS</text>'
     )
     for i, color in enumerate(HEAT_PALETTE):
         lx = legend_x + 38 + i * (CELL + GAP)
@@ -188,19 +226,44 @@ def render_svg(data: dict) -> str:
     parts.append(
         f'<text x="{legend_x + 38 + len(HEAT_PALETTE) * (CELL + GAP) + 6}" y="{legend_y}" '
         f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="10" fill="{DIM}">More</text>'
+        f'font-size="9.5" fill="{DIM}" font-weight="bold">MORE</text>'
     )
 
-    # --- Streak stats ---
-    streak_y = legend_y + 20
+    # --- Tactical Stats Panel (Engineering block layout) ---
+    stats_divider_y = legend_y + 14
+    parts.append(
+        f'<text x="{ox}" y="{stats_divider_y}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+        f'font-size="10" fill="{DIM}" opacity="0">'
+        f'[ STATS_METRICS ] ───────────────────────────────────────────────────────────────────────────────────'
+        f'<animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.3s" fill="freeze"/>'
+        f'</text>'
+    )
+
+    stats_y = stats_divider_y + 16
     streak = stats.get("current_streak", 0)
     longest = stats.get("longest_streak", 0)
     parts.append(
-        f'<text x="{ox + PAD_L}" y="{streak_y}" '
-        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="10" fill="{DIM}" opacity="0">'
-        f'current streak: {streak}d  ·  longest: {longest}d'
-        f'<animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.4s" fill="freeze"/>'
+        f'<text x="{ox + PAD_L}" y="{stats_y}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+        f'font-size="11" opacity="0">'
+        f'<tspan font-weight="bold" fill="{RED}">[ CURRENT_STREAK ]</tspan> '
+        f'<tspan fill="{TEXT}">{streak} DAYS</tspan>  ·  '
+        f'<tspan font-weight="bold" fill="{AMBER}">[ LONGEST_STREAK ]</tspan> '
+        f'<tspan fill="{TEXT}">{longest} DAYS</tspan>  ·  '
+        f'<tspan font-weight="bold" fill="{BLUE}">[ COMPILATION ]</tspan> '
+        f'<tspan fill="{TEXT}">NOMINAL</tspan>'
+        f'<animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.3s" fill="freeze"/>'
+        f'</text>'
+    )
+
+    # --- Bottom bar content (Consistent with other cards) ---
+    parts.append(
+        f'<text x="20" y="{H - 11}" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'DATABASE // INDEXING : OK'
+        f'</text>'
+    )
+    parts.append(
+        f'<text x="{W - 20}" y="{H - 11}" font-size="9" fill="{DIM}" font-weight="bold" text-anchor="end">'
+        f'STORAGE_NODE: LOCAL_SHARD_01 // SECURE_FLOW'
         f'</text>'
     )
 
@@ -209,7 +272,7 @@ def render_svg(data: dict) -> str:
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <style>
-    text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }}
+    text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.02em; }}
   </style>
   {svg_body}
 </svg>'''

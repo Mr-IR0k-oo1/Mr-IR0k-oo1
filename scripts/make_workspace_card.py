@@ -1,32 +1,30 @@
 #!/usr/bin/env python3
-"""Generate a workspace overview SVG — project cards with status indicators."""
+"""Generate a highly-engineered, industrial-brutalist workspace card SVG with tactical terminal aesthetics."""
 
 import os
 
-STATIC = os.environ.get("STATIC", "0") == "1"
+# --- Tactical Telemetry Palette (Consistent with info_card) ---
+BG            = "#0B0C10"  # Deep space/charcoal technical background
+BORDER        = "#1F2430"  # Dark steel grid line
+BORDER_BRIGHT = "#3F4D66"  # Active frame highlight
+TEXT          = "#E2E8F0"  # Crisp off-white phosphor text
+DIM           = "#5A6578"  # Blueprint slate gray for metadata
 
-# --- Catppuccin Mocha ---
-BG      = "#1e1e2e"
-SURFACE = "#313244"
-OVERLAY = "#45475a"
-TEXT    = "#cdd6f4"
-DIM     = "#6c7086"
-BLUE    = "#89b4fa"
-GREEN   = "#a6e3a1"
-YELLOW  = "#f9e2af"
-RED     = "#f38ba8"
-MAUVE   = "#cba6f7"
-PEACH   = "#fab387"
-TEAL    = "#94e2d5"
-PINK    = "#f5c2e7"
+# Accent Colors
+RED           = "#FF3E3E"  # Aviation hazard / alarm red
+GREEN         = "#00FF66"  # Matrix phosphor active green
+BLUE          = "#00F0FF"  # Hyper-cyber blue/teal
+AMBER         = "#FFB700"  # Tactical warning amber
+MAUVE         = "#B388FF"  # High-altitude purple
+PEACH         = "#FF9E80"  # Sensor-range orange
 
-# --- Projects ---
+# --- Selected Projects Database ---
 PROJECTS = [
     {
         "name": "cve-scanner",
         "lang": "Rust",
         "lang_color": PEACH,
-        "status": "active",
+        "status": "ACTIVE",
         "status_color": GREEN,
         "desc": "CVE correlation engine — NVD + EPSS risk scoring",
     },
@@ -34,36 +32,32 @@ PROJECTS = [
         "name": "wifi-diag",
         "lang": "Python",
         "lang_color": BLUE,
-        "status": "active",
+        "status": "ACTIVE",
         "status_color": GREEN,
-        "desc": "802.11 packet sniffer → rogue-AP detection",
+        "desc": "802.11 packet sniffer → rogue-AP detection module",
     },
     {
         "name": "ai-orchestrator",
         "lang": "Rust",
         "lang_color": PEACH,
-        "status": "wip",
-        "status_color": YELLOW,
+        "status": "STAGED",
+        "status_color": AMBER,
         "desc": "Terminal memory layer for multi-CLI agents",
     },
     {
         "name": "sdr-tracker",
         "lang": "Rust",
         "lang_color": PEACH,
-        "status": "wip",
-        "status_color": YELLOW,
-        "desc": "SGP4 orbital propagation + IQ pipelines",
+        "status": "STAGED",
+        "status_color": AMBER,
+        "desc": "SGP4 orbital propagation + IQ raw processing pipelines",
     },
 ]
 
-# --- Dimensions ---
-BAR_H    = 34
-PAD_X    = 20
-PAD_Y    = 16
-CARD_H   = 44
-CARD_GAP = 8
+# --- Dimensions (Matches info_card.svg exactly) ---
 W = 490
-H = PAD_Y + BAR_H + len(PROJECTS) * (CARD_H + CARD_GAP) + PAD_Y + 4
+H = 280
+PAD_X = 20
 
 
 def esc(t: str) -> str:
@@ -71,96 +65,129 @@ def esc(t: str) -> str:
 
 
 def build_svg() -> str:
-    parts = []
+    lines = []
 
-    # --- Window chrome ---
-    parts.append(f'<rect width="{W}" height="{H}" rx="10" fill="{BG}" stroke="{SURFACE}" stroke-width="1"/>')
-    parts.append(f'<rect width="{W}" height="{BAR_H}" rx="10" fill="{SURFACE}"/>')
-    parts.append(f'<rect y="24" width="{W}" height="10" fill="{SURFACE}"/>')
-    parts.append(f'<circle cx="18" cy="{BAR_H//2}" r="5" fill="{RED}"/>')
-    parts.append(f'<circle cx="36" cy="{BAR_H//2}" r="5" fill="{YELLOW}"/>')
-    parts.append(f'<circle cx="54" cy="{BAR_H//2}" r="5" fill="{GREEN}"/>')
-    parts.append(
-        f'<text x="{W//2}" y="{BAR_H//2 + 5}" text-anchor="middle" '
-        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="12" fill="{DIM}">workspace — selected projects</text>'
+    # --- Container and main grid ---
+    # Sharp 90-degree outer container
+    lines.append(f'<rect width="{W}" height="{H}" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>')
+
+    # Blueprint Grid Lines (aligned with info_card)
+    lines.append(f'<line x1="0" y1="26" x2="{W}" y2="26" stroke="{BORDER}" stroke-width="1"/>')
+    lines.append(f'<line x1="0" y1="254" x2="{W}" y2="254" stroke="{BORDER}" stroke-width="1"/>')
+
+    # Corner registration crosshairs (+)
+    lines.append(f'<text x="6" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    lines.append(f'<text x="{W - 13}" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    lines.append(f'<text x="6" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    lines.append(f'<text x="{W - 13}" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+
+    # --- Header bar contents ---
+    # Flashing session status square
+    lines.append(
+        f'<rect x="20" y="10" width="6" height="6" fill="{BLUE}">'
+        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'</rect>'
+    )
+    lines.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="{BLUE}">[ DIRECTORY: ~/PROJECTS ]</text>')
+
+    # Centered catalog indicator
+    lines.append(
+        f'<text x="{W//2}" y="16" text-anchor="middle" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'WORKSPACE MODULES // QUERY_OK'
+        f'</text>'
     )
 
-    # --- Section header ---
-    cy = PAD_Y + BAR_H + 14
-    parts.append(
-        f'<text x="{PAD_X}" y="{cy}" '
-        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="11" fill="{DIM}">$ ls -la ~/projects</text>'
-    )
-    cy += 8
+    # Right side security warning
+    lines.append(f'<text x="{W - 20}" y="16" text-anchor="end" font-size="9" fill="{RED}" font-weight="bold">TARGET_NODES: 04</text>')
 
-    # --- Project cards ---
+    # --- Section Subheader (Terminal Command Prompt) ---
+    lines.append(
+        f'<text x="20" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+        f'font-size="11" fill="{BLUE}">'
+        f'$ workspace --query-active --verbose'
+        f'</text>'
+    )
+
+    # --- Modular Project Cards (Brutalist Table Rows) ---
+    card_y_start = 60
+    card_h = 40
+    gap = 6
+
     for i, proj in enumerate(PROJECTS):
-        delay = 0.3 + i * 0.2
-        card_y = cy + i * (CARD_H + CARD_GAP)
+        delay = 0.15 + i * 0.12
+        card_y = card_y_start + i * (card_h + gap)
 
-        # Card background
-        parts.append(
-            f'<rect x="{PAD_X}" y="{card_y}" width="{W - PAD_X*2}" height="{CARD_H}" '
-            f'rx="6" fill="{SURFACE}" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="0.6" begin="{delay:.2f}s" dur="0.3s" fill="freeze"/>'
+        # Outer project container box (90-degree corners, crisp borders)
+        lines.append(
+            f'<rect x="{PAD_X}" y="{card_y}" width="{W - PAD_X*2}" height="{card_h}" '
+            f'fill="#10131B" stroke="{BORDER}" stroke-width="1" opacity="0">'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</rect>'
         )
 
-        # Status dot
-        dot_x = PAD_X + 12
-        dot_y = card_y + CARD_H // 2
-        parts.append(
-            f'<circle cx="{dot_x}" cy="{dot_y}" r="3" fill="{proj["status_color"]}" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.1:.2f}s" dur="0.3s" fill="freeze"/>'
-            f'</circle>'
+        # Tactical Status Partition vertical divider at x=90
+        lines.append(
+            f'<line x1="90" y1="{card_y}" x2="90" y2="{card_y + card_h}" stroke="{BORDER}" stroke-width="1" opacity="0">'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'</line>'
         )
 
-        # Project name
-        name_x = PAD_X + 24
-        parts.append(
-            f'<text x="{name_x}" y="{card_y + 17}" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+        # Left partition: Status bracket text e.g. "ACTIVE" or "STAGED"
+        status_text = f" {proj['status']} "
+        lines.append(
+            f'<text x="55" y="{card_y + 24}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+            f'font-size="9" font-weight="bold" fill="{proj["status_color"]}" text-anchor="middle" opacity="0">'
+            f'{esc(status_text)}'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'</text>'
+        )
+
+        # Right partition: Project Name
+        lines.append(
+            f'<text x="105" y="{card_y + 16}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
             f'font-size="12" font-weight="bold" fill="{TEXT}" opacity="0">'
             f'{esc(proj["name"])}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.1:.2f}s" dur="0.3s" fill="freeze"/>'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-        # Language badge
-        lang_x = name_x + len(proj["name"]) * 7.5 + 12
-        parts.append(
-            f'<rect x="{lang_x}" y="{card_y + 7}" width="{len(proj["lang"]) * 7 + 10}" height="14" '
-            f'rx="3" fill="{proj["lang_color"]}" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="0.25" begin="{delay + 0.15:.2f}s" dur="0.3s" fill="freeze"/>'
-            f'</rect>'
-        )
-        parts.append(
-            f'<text x="{lang_x + 5}" y="{card_y + 17}" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="9" fill="{proj["lang_color"]}" opacity="0">'
-            f'{esc(proj["lang"])}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.15:.2f}s" dur="0.3s" fill="freeze"/>'
+        # Right partition: Language Badge (styled in technical brackets e.g. "[ RUST ]" right-aligned)
+        lang_str = f"[ {proj['lang'].upper()} ]"
+        lines.append(
+            f'<text x="{W - 32}" y="{card_y + 16}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+            f'font-size="10" font-weight="bold" fill="{proj["lang_color"]}" text-anchor="end" opacity="0">'
+            f'{esc(lang_str)}'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-        # Description
-        parts.append(
-            f'<text x="{name_x}" y="{card_y + 34}" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="10" fill="{DIM}" opacity="0">'
+        # Right partition: Description Payload
+        lines.append(
+            f'<text x="105" y="{card_y + 30}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+            f'font-size="9.5" fill="{DIM}" opacity="0">'
             f'{esc(proj["desc"])}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.2:.2f}s" dur="0.3s" fill="freeze"/>'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-    svg_body = "\n  ".join(parts)
+    # --- Bottom bar content ---
+    lines.append(
+        f'<text x="20" y="269" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'ACTIVE_REPOS // INGESTION : NOMINAL'
+        f'</text>'
+    )
+    lines.append(
+        f'<text x="{W - 20}" y="269" font-size="9" fill="{DIM}" font-weight="bold" text-anchor="end">'
+        f'NODES_ONLINE: 04 // STREAM: OK'
+        f'</text>'
+    )
+
+    svg_body = "\n  ".join(lines)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <style>
-    text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }}
+    text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.02em; }}
   </style>
   {svg_body}
 </svg>'''

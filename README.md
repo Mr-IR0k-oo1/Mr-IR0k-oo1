@@ -86,9 +86,6 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Mr-IR0k-oo1&show_icons=true&hide_title=true&count_private=true&hide_border=true&bg_color=00000000&title_color=2d2d2d&icon_color=2d2d2d&text_color=555555" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-IR0k-oo1&layout=compact&hide_border=true&bg_color=00000000&title_color=2d2d2d&text_color=555555" />
-<br/>
 <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=Mr-IR0k-oo1&hide_border=true&background=00000000&ring=2d2d2d&fire=2d2d2d&currStreakLabel=2d2d2d&sideNums=2d2d2d&sideLabels=555555&dates=555555&currStreakNum=2d2d2d&stroke=2d2d2d" />
 
 </div>
