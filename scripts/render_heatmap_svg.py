@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Render contributions.json into the industrial-brutalist animated heatmap SVG.
 
-Theme-aware: palette comes from scripts/theme.py CSS custom properties so the
-card adapts to GitHub's light/dark mode while keeping the tactical telemetry
-aesthetic in dark mode.
+Theme-aware: palette comes from theme.py CSS custom properties so the card
+adapts to GitHub's light/dark mode while keeping the tactical telemetry
+aesthetic in dark mode. Motion honours REDUCE_MOTION=1 (no SMIL emitted).
 """
 
 import json
@@ -88,9 +88,10 @@ def render_svg(data: dict) -> str:
     parts.append(f'<text x="{W - 13}" y="{H - 6}" font-size="9" fill="var(--dim)" font-weight="bold">+</text>')
 
     # --- Header bar contents ---
+    # Flashing system status square
     parts.append(
         f'<rect x="20" y="10" width="6" height="6" fill="var(--green)">'
-        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'{theme.smil("opacity", "1;0.3;1", "1.5s", repeat="indefinite")}'
         f'</rect>'
     )
     parts.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="var(--green)">[ CONSOLE: BASHLOG ]</text>')
@@ -113,11 +114,12 @@ def render_svg(data: dict) -> str:
 
     prompt_y += 16
     total = stats.get("total", 0)
+    op, anim = theme.fade("0.2s", "0.2s")
     parts.append(
         f'<text x="{ox}" y="{prompt_y}" '
-        f'font-size="12" fill="var(--green)" font-weight="bold" opacity="0">'
+        f'font-size="12" fill="var(--green)" font-weight="bold" {op}>'
         f'[+] {total:,} INGESTED LOGS DETECTED'
-        f'<animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.2s" fill="freeze"/>'
+        f'{anim}'
         f'</text>'
     )
 
@@ -161,12 +163,12 @@ def render_svg(data: dict) -> str:
             y = grid_oy + PAD_T + row * (CELL + GAP)
 
             delay = 0.05 + cell_idx * 0.002
+            op, anim = theme.fade(f"{delay:.3f}s")
 
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
-                f'rx="{RADIUS}" fill="{fill}" opacity="0">'
-                f'<animate attributeName="opacity" from="0" to="1" '
-                f'begin="{delay:.3f}s" dur="0.15s" fill="freeze"/>'
+                f'rx="{RADIUS}" fill="{fill}" {op}>'
+                f'{anim}'
                 f'</rect>'
             )
             cell_idx += 1
@@ -191,25 +193,27 @@ def render_svg(data: dict) -> str:
 
     # --- Tactical Stats Panel ---
     stats_divider_y = legend_y + 14
+    op, anim = theme.fade("1.2s", "0.3s")
     parts.append(
-        f'<text x="{ox}" y="{stats_divider_y}" font-size="10" fill="var(--dim)" opacity="0">'
+        f'<text x="{ox}" y="{stats_divider_y}" font-size="10" fill="var(--dim)" {op}>'
         f'[ STATS_METRICS ] ───────────────────────────────────────────────────────────────────────────────────'
-        f'<animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.3s" fill="freeze"/>'
+        f'{anim}'
         f'</text>'
     )
 
     stats_y = stats_divider_y + 16
     streak = stats.get("current_streak", 0)
     longest = stats.get("longest_streak", 0)
+    op, anim = theme.fade("1.4s", "0.3s")
     parts.append(
-        f'<text x="{ox + PAD_L}" y="{stats_y}" font-size="11" opacity="0">'
+        f'<text x="{ox + PAD_L}" y="{stats_y}" font-size="11" {op}>'
         f'<tspan font-weight="bold" fill="var(--red)">[ CURRENT_STREAK ]</tspan> '
         f'<tspan fill="var(--text)">{streak} DAYS</tspan>  ·  '
         f'<tspan font-weight="bold" fill="var(--amber)">[ LONGEST_STREAK ]</tspan> '
         f'<tspan fill="var(--text)">{longest} DAYS</tspan>  ·  '
         f'<tspan font-weight="bold" fill="var(--blue)">[ COMPILATION ]</tspan> '
         f'<tspan fill="var(--text)">NOMINAL</tspan>'
-        f'<animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.3s" fill="freeze"/>'
+        f'{anim}'
         f'</text>'
     )
 
@@ -228,7 +232,10 @@ def render_svg(data: dict) -> str:
     svg_body = "\n  ".join(parts)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<!-- Hallmark · system: industrial-brutalist (DESIGN.md) · card: contribution-heatmap · motion: SMIL cascade · reduced-motion: {"yes" if theme.REDUCE_MOTION else "no"} -->
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="hm-title hm-desc">
+  <title id="hm-title">Contribution heatmap</title>
+  <desc id="hm-desc">{total:,} contributions over the past 52 weeks; current streak {streak} days.</desc>
   {theme.css()}
   {svg_body}
 </svg>'''

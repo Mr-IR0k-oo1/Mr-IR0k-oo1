@@ -102,7 +102,7 @@ def build_svg(data: dict) -> str:
     # --- Header bar contents ---
     parts.append(
         f'<rect x="20" y="10" width="6" height="6" fill="var(--green)">'
-        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'{theme.smil("opacity", "1;0.3;1", "1.5s", repeat="indefinite")}'
         f'</rect>'
     )
     parts.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="var(--green)">[ CONSOLE: PROFILER ]</text>')
@@ -133,8 +133,8 @@ def build_svg(data: dict) -> str:
     for label, value in stats_rows:
         parts.append(
             f'<text x="{ox}" y="{y}" font-size="12">'
-            f'<tspan fill="var(--blue)" font-weight="bold">[ {esc(label):>12} ]</tspan>'
-            f'<tspan fill="var(--dim)"> =</tspan>'
+            f'<tspan text-anchor="end" x="{ox + 158}" fill="var(--blue)" font-weight="bold">[ {esc(label)} ]</tspan>'
+            f'<tspan x="{ox + 168}" fill="var(--dim)"> =</tspan>'
             f'<tspan fill="var(--text)">  {esc(value)}</tspan>'
             f'</text>'
         )
@@ -167,11 +167,11 @@ def build_svg(data: dict) -> str:
                 f'fill="var(--surface)"/>'
             )
             fill_w = max(2.0, BAR_W * pct / 100.0)
+            op, anim = theme.fade("0.4s", "0.4s")
             parts.append(
                 f'<rect x="{ox}" y="{bar_y}" width="{fill_w:.1f}" height="6" '
-                f'fill="{color}" opacity="0">'
-                f'<animate attributeName="opacity" from="0" to="1" '
-                f'begin="0.4s" dur="0.4s" fill="freeze"/>'
+                f'fill="{color}" {op}>'
+                f'{anim}'
                 f'</rect>'
             )
             y += LINE_H
@@ -192,11 +192,11 @@ def build_svg(data: dict) -> str:
                 f'fill="var(--surface)"/>'
             )
             fill_w = max(2.0, BAR_W * other_pct / 100.0)
+            op, anim = theme.fade("0.5s", "0.4s")
             parts.append(
                 f'<rect x="{ox}" y="{bar_y}" width="{fill_w:.1f}" height="6" '
-                f'fill="{OTHER_COLOR}" opacity="0">'
-                f'<animate attributeName="opacity" from="0" to="1" '
-                f'begin="0.5s" dur="0.4s" fill="freeze"/>'
+                f'fill="{OTHER_COLOR}" {op}>'
+                f'{anim}'
                 f'</rect>'
             )
             y += LINE_H
@@ -209,9 +209,15 @@ def build_svg(data: dict) -> str:
         y += LINE_H
 
     # --- Blinking cursor ---
+    if theme.REDUCE_MOTION:
+        cursor_op = 'opacity="0.6"'
+        cursor_anim = ""
+    else:
+        cursor_op = 'opacity="0"'
+        cursor_anim = theme.smil("opacity", "0;1;1;0", "1.2s", repeat="indefinite")
     parts.append(
-        f'<rect x="{ox}" y="{y - 11}" width="8" height="14" fill="var(--text)" opacity="0">'
-        f'<animate attributeName="opacity" values="0;1;1;0" dur="1.2s" repeatCount="indefinite"/>'
+        f'<rect x="{ox}" y="{y - 11}" width="8" height="14" fill="var(--text)" {cursor_op}>'
+        f'{cursor_anim}'
         f'</rect>'
     )
 
@@ -230,7 +236,10 @@ def build_svg(data: dict) -> str:
     body = "\n  ".join(parts)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<!-- Hallmark · system: industrial-brutalist (DESIGN.md) · card: profile-stats · motion: SMIL cascade · reduced-motion: {"yes" if theme.REDUCE_MOTION else "no"} -->
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="ps-title ps-desc">
+  <title id="ps-title">Profile stats</title>
+  <desc id="ps-desc">{repos.get("count", 0)} public repositories; top languages and account metrics.</desc>
   {theme.css()}
   {body}
 </svg>'''

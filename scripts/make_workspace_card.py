@@ -74,7 +74,7 @@ def build_svg() -> str:
     # --- Header bar contents ---
     lines.append(
         f'<rect x="20" y="10" width="6" height="6" fill="var(--blue)">'
-        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'{theme.smil("opacity", "1;0.3;1", "1.5s", repeat="indefinite")}'
         f'</rect>'
     )
     lines.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="var(--blue)">[ DIRECTORY: ~/PROJECTS ]</text>')
@@ -103,46 +103,52 @@ def build_svg() -> str:
         delay = 0.15 + i * 0.12
         card_y = card_y_start + i * (card_h + gap)
 
+        op, anim = theme.fade(f"{delay:.2f}s")
         lines.append(
             f'<rect x="{PAD_X}" y="{card_y}" width="{W - PAD_X*2}" height="{card_h}" '
-            f'fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'fill="var(--surface)" stroke="var(--border)" stroke-width="1" {op}>'
+            f'{anim}'
             f'</rect>'
         )
 
+        op, anim = theme.fade(f"{delay:.2f}s")
         lines.append(
-            f'<line x1="90" y1="{card_y}" x2="90" y2="{card_y + card_h}" stroke="var(--border)" stroke-width="1" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'<line x1="90" y1="{card_y}" x2="90" y2="{card_y + card_h}" stroke="var(--border)" stroke-width="1" {op}>'
+            f'{anim}'
             f'</line>'
         )
 
         status_text = f" {proj['status']} "
+        op, anim = theme.fade(f"{delay + 0.05:.2f}s")
         lines.append(
-            f'<text x="55" y="{card_y + 24}" font-size="9" font-weight="bold" fill="{proj["status_color"]}" text-anchor="middle" opacity="0">'
+            f'<text x="55" y="{card_y + 24}" font-size="9" font-weight="bold" fill="{proj["status_color"]}" text-anchor="middle" {op}>'
             f'{esc(status_text)}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
+        op, anim = theme.fade(f"{delay + 0.05:.2f}s")
         lines.append(
-            f'<text x="105" y="{card_y + 16}" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">'
+            f'<text x="105" y="{card_y + 16}" font-size="12" font-weight="bold" fill="var(--text)" {op}>'
             f'{esc(proj["name"])}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
         lang_str = f"[ {proj['lang'].upper()} ]"
+        op, anim = theme.fade(f"{delay + 0.08:.2f}s")
         lines.append(
-            f'<text x="{W - 32}" y="{card_y + 16}" font-size="10" font-weight="bold" fill="{proj["lang_color"]}" text-anchor="end" opacity="0">'
+            f'<text x="{W - 32}" y="{card_y + 16}" font-size="10" font-weight="bold" fill="{proj["lang_color"]}" text-anchor="end" {op}>'
             f'{esc(lang_str)}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
+        op, anim = theme.fade(f"{delay + 0.08:.2f}s")
         lines.append(
-            f'<text x="105" y="{card_y + 30}" font-size="9.5" fill="var(--dim)" opacity="0">'
+            f'<text x="105" y="{card_y + 30}" font-size="9.5" fill="var(--dim)" {op}>'
             f'{esc(proj["desc"])}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
@@ -161,7 +167,10 @@ def build_svg() -> str:
     svg_body = "\n  ".join(lines)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<!-- Hallmark · system: industrial-brutalist (DESIGN.md) · card: workspace · motion: SMIL cascade · reduced-motion: {"yes" if theme.REDUCE_MOTION else "no"} -->
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="wc-title wc-desc">
+  <title id="wc-title">Active projects</title>
+  <desc id="wc-desc">Current project status, language, and description.</desc>
   {theme.css()}
   {svg_body}
 </svg>'''

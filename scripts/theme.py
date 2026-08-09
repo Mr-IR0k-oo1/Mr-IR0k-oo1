@@ -59,6 +59,41 @@ LIGHT = {
 }
 
 
+import os
+
+REDUCE_MOTION = os.environ.get("REDUCE_MOTION", "") == "1"
+
+
+def smil(attribute: str, values: str, dur: str, begin: str | None = None,
+         repeat: str | None = None, extra: str = "") -> str:
+    """Emit a <animate> element, or nothing when motion is reduced.
+
+    SMIL is not controllable via CSS animation rules, so the only honest way to
+    honour prefers-reduced-motion on an <img>-embedded SVG is to not emit it.
+    """
+    if REDUCE_MOTION:
+        return ""
+    attrs = f'attributeName="{attribute}" values="{values}" dur="{dur}"'
+    if begin:
+        attrs += f' begin="{begin}"'
+    if repeat:
+        attrs += f' repeatCount="{repeat}"'
+    if extra:
+        attrs += f" {extra}"
+    return f"<animate {attrs}/>"
+
+
+def fade(begin: str, dur: str = "0.15s", base: str = "0") -> tuple[str, str]:
+    """Return (opacity_attr, animate_el) for a fade-in.
+
+    Under reduced motion the element renders fully opaque with no animation;
+    otherwise it starts at `base` and fades in at `begin`.
+    """
+    if REDUCE_MOTION:
+        return 'opacity="1"', ""
+    return f'opacity="{base}"', smil("opacity", f"{base};1", dur, begin=begin, extra='fill="freeze"')
+
+
 def css() -> str:
     def block(palette: dict[str, str]) -> str:
         return "\n".join(f"  {k}: {v};" for k, v in palette.items())

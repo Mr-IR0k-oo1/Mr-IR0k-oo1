@@ -64,7 +64,7 @@ def build_svg() -> str:
     # --- Header bar contents ---
     lines.append(
         f'<rect x="20" y="10" width="6" height="6" fill="var(--green)">'
-        f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
+        f'{theme.smil("opacity", "1;0.3;1", "1.5s", repeat="indefinite")}'
         f'</rect>'
     )
     lines.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="var(--green)">[ SESSION: ACTIVE ]</text>')
@@ -84,24 +84,27 @@ def build_svg() -> str:
         ly = y_logo_start + i * logo_line_h
         delay = 0.1 + i * 0.05
         row_color = "var(--green)" if i in (2, 5) else "var(--blue)"
+        op, anim = theme.fade(f"{delay:.2f}s")
         lines.append(
-            f'<text x="20" y="{ly}" font-size="12" fill="{row_color}" font-weight="bold" opacity="0">'
+            f'<text x="20" y="{ly}" font-size="12" fill="{row_color}" font-weight="bold" {op}>'
             f'{esc(row)}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
     # --- Right Column: User Title & Separator ---
+    op, anim = theme.fade("0.1s")
     lines.append(
-        f'<text x="130" y="55" font-size="14" font-weight="bold" fill="var(--blue)" opacity="0">'
+        f'<text x="130" y="55" font-size="14" font-weight="bold" fill="var(--blue)" {op}>'
         f'{esc(TITLE)}'
-        f'<animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.2s" fill="freeze"/>'
+        f'{anim}'
         f'</text>'
     )
+    op, anim = theme.fade("0.15s")
     lines.append(
-        f'<text x="130" y="68" font-size="10" fill="var(--dim)" opacity="0">'
+        f'<text x="130" y="68" font-size="10" fill="var(--dim)" {op}>'
         f'──────────────────────────────────────────'
-        f'<animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/>'
+        f'{anim}'
         f'</text>'
     )
 
@@ -113,25 +116,33 @@ def build_svg() -> str:
         y_pos = row_y_start + i * row_h
 
         label_str = f"[ {label:<6} ]"
+        op, anim = theme.fade(f"{delay:.2f}s")
         lines.append(
-            f'<text x="130" y="{y_pos}" font-size="11" opacity="0">'
+            f'<text x="130" y="{y_pos}" font-size="11" {op}>'
             f'<tspan font-weight="bold" fill="var(--red)">{esc(label_str)}</tspan>'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
+        op, anim = theme.fade(f"{delay + 0.04:.2f}s")
         lines.append(
-            f'<text x="210" y="{y_pos}" font-size="11" fill="{val_color}" opacity="0">'
+            f'<text x="210" y="{y_pos}" font-size="11" fill="{val_color}" {op}>'
             f'{esc(value)}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.04:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'{anim}'
             f'</text>'
         )
 
     # --- Blinking Command Line Cursor ---
     cursor_y = row_y_start + len(ROWS) * row_h + 3
+    if theme.REDUCE_MOTION:
+        cursor_op = 'opacity="0.6"'
+        cursor_anim = ""
+    else:
+        cursor_op = 'opacity="0"'
+        cursor_anim = theme.smil("opacity", "0;1;1;0", "1.0s", repeat="indefinite")
     lines.append(
-        f'<rect x="130" y="{cursor_y - 10}" width="8" height="12" fill="var(--blue)" opacity="0">'
-        f'<animate attributeName="opacity" values="0;1;1;0" dur="1.0s" repeatCount="indefinite"/>'
+        f'<rect x="130" y="{cursor_y - 10}" width="8" height="12" fill="var(--blue)" {cursor_op}>'
+        f'{cursor_anim}'
         f'</rect>'
     )
 
@@ -147,16 +158,20 @@ def build_svg() -> str:
                       "var(--mauve)", "var(--peach)", "var(--pink)", "var(--text)"]
     for i, c in enumerate(palette_colors):
         bx = W - 142 + i * 15
+        op, anim = theme.fade(f"{1.2 + i * 0.05:.2f}s")
         lines.append(
-            f'<rect x="{bx}" y="262" width="10" height="8" fill="{c}" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{1.2 + i * 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
+            f'<rect x="{bx}" y="262" width="10" height="8" fill="{c}" {op}>'
+            f'{anim}'
             f'</rect>'
         )
 
     svg_body = "\n  ".join(lines)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<!-- Hallmark · system: industrial-brutalist (DESIGN.md) · card: info · motion: SMIL cascade · reduced-motion: {"yes" if theme.REDUCE_MOTION else "no"} -->
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="ic-title ic-desc">
+  <title id="ic-title">System profile</title>
+  <desc id="ic-desc">{esc(TITLE)} — system, editor, tooling, and focus areas.</desc>
   {theme.css()}
   {svg_body}
 </svg>'''
