@@ -15,7 +15,7 @@
   <text x="467" y="16" text-anchor="middle" font-size="9" fill="#5A6578" font-weight="bold">STREAM: SYSTEM_ACTIVITY_INDEX // 52_WEEK_MATRIX</text>
   <text x="914" y="16" text-anchor="end" font-size="9" fill="#FF3E3E" font-weight="bold">INGEST_STATE: ONLINE</text>
   <text x="20" y="58" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#00F0FF">mr-ir0k-oo1@mainframe:~$ git log --since="52 weeks ago" | wc -l</text>
-  <text x="20" y="74" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00FF66" font-weight="bold" opacity="0">[+] 915 INGESTED LOGS DETECTED<animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="74" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00FF66" font-weight="bold" opacity="0">[+] 920 INGESTED LOGS DETECTED<animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.2s" fill="freeze"/></text>
   <text x="20" y="129" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" text-anchor="start" font-weight="bold">Mon</text>
   <text x="20" y="161" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" text-anchor="start" font-weight="bold">Wed</text>
   <text x="20" y="193" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" text-anchor="start" font-weight="bold">Fri</text>
@@ -401,7 +401,7 @@
   <rect x="888" y="150" width="13" height="13" rx="1.0" fill="#0D3A1F" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.784s" dur="0.15s" fill="freeze"/></rect>
   <rect x="888" y="166" width="13" height="13" rx="1.0" fill="#2DBC62" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.786s" dur="0.15s" fill="freeze"/></rect>
   <rect x="888" y="182" width="13" height="13" rx="1.0" fill="#145E32" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.788s" dur="0.15s" fill="freeze"/></rect>
-  <rect x="888" y="198" width="13" height="13" rx="1.0" fill="#12151D" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.790s" dur="0.15s" fill="freeze"/></rect>
+  <rect x="888" y="198" width="13" height="13" rx="1.0" fill="#0D3A1F" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.790s" dur="0.15s" fill="freeze"/></rect>
   <text x="56" y="232" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" font-weight="bold">LESS</text>
   <rect x="94" y="222" width="13" height="13" rx="1.0" fill="#12151D"/>
   <rect x="110" y="222" width="13" height="13" rx="1.0" fill="#0D3A1F"/>
@@ -411,7 +411,7 @@
   <rect x="174" y="222" width="13" height="13" rx="1.0" fill="#00FF66"/>
   <text x="196" y="232" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" font-weight="bold">MORE</text>
   <text x="20" y="246" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#5A6578" opacity="0">[ STATS_METRICS ] ───────────────────────────────────────────────────────────────────────────────────<animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.3s" fill="freeze"/></text>
-  <text x="56" y="262" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ CURRENT_STREAK ]</tspan> <tspan fill="#E2E8F0">0 DAYS</tspan>  ·  <tspan font-weight="bold" fill="#FFB700">[ LONGEST_STREAK ]</tspan> <tspan fill="#E2E8F0">22 DAYS</tspan>  ·  <tspan font-weight="bold" fill="#00F0FF">[ COMPILATION ]</tspan> <tspan fill="#E2E8F0">NOMINAL</tspan><animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.3s" fill="freeze"/></text>
+  <text x="56" y="262" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ CURRENT_STREAK ]</tspan> <tspan fill="#E2E8F0">23 DAYS</tspan>  ·  <tspan font-weight="bold" fill="#FFB700">[ LONGEST_STREAK ]</tspan> <tspan fill="#E2E8F0">23 DAYS</tspan>  ·  <tspan font-weight="bold" fill="#00F0FF">[ COMPILATION ]</tspan> <tspan fill="#E2E8F0">NOMINAL</tspan><animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.3s" fill="freeze"/></text>
   <text x="20" y="284" font-size="9" fill="#5A6578" font-weight="bold">DATABASE // INDEXING : OK</text>
   <text x="914" y="284" font-size="9" fill="#5A6578" font-weight="bold" text-anchor="end">STORAGE_NODE: LOCAL_SHARD_01 // SECURE_FLOW</text>
 </svg>
