@@ -1,56 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280">
   <style>
-    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.02em; }
-  </style>
-  <rect width="490" height="280" fill="#0B0C10" stroke="#1F2430" stroke-width="1.5"/>
-  <line x1="110" y1="0" x2="110" y2="280" stroke="#1F2430" stroke-width="1" stroke-dasharray="2,2"/>
-  <line x1="0" y1="26" x2="490" y2="26" stroke="#1F2430" stroke-width="1"/>
-  <line x1="0" y1="254" x2="490" y2="254" stroke="#1F2430" stroke-width="1"/>
-  <text x="6" y="12" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="477" y="12" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="6" y="274" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="477" y="274" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <rect x="20" y="10" width="6" height="6" fill="#00FF66"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></rect>
-  <text x="32" y="16" font-size="9" font-weight="bold" fill="#00FF66">[ SESSION: ACTIVE ]</text>
-  <text x="245" y="16" text-anchor="middle" font-size="9" fill="#5A6578" font-weight="bold">TELEMETRY CORE // CONSOLE v2.0</text>
-  <text x="470" y="16" text-anchor="end" font-size="9" fill="#FF3E3E" font-weight="bold">SEC_LEVEL: HIGH</text>
-  <text x="20" y="55" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00F0FF" font-weight="bold" opacity="0">  .──▲──.  <animate attributeName="opacity" from="0" to="1" begin="0.10s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="73" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00F0FF" font-weight="bold" opacity="0"> /   │   \ <animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="91" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00FF66" font-weight="bold" opacity="0">◄───[●]───►<animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="109" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00F0FF" font-weight="bold" opacity="0"> \   │   / <animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="127" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00F0FF" font-weight="bold" opacity="0">  '──▼──'  <animate attributeName="opacity" from="0" to="1" begin="0.30s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="145" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#00FF66" font-weight="bold" opacity="0">  [READY]  <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="55" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="bold" fill="#00F0FF" opacity="0">Mr-IR0k-oo1@mainframe<animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="68" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#5A6578" opacity="0">──────────────────────────────────────────<animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="86" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ OS     ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="86" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#00F0FF" opacity="0">Arch Linux x86_64<animate attributeName="opacity" from="0" to="1" begin="0.24s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ HOST   ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.28s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#E2E8F0" opacity="0">Linux Kernel 6.x // Hardened<animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="118" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ SHELL  ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.36s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="118" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#E2E8F0" opacity="0">bash 5.2.26-release<animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="134" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ EDITOR ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="134" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#00FF66" opacity="0">Neovim 0.10.x + tmux 3.4<animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ TERM   ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.52s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#E2E8F0" opacity="0">Alacritty // Minimal &amp; Fast<animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ CPU    ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.60s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#FF9E80" opacity="0">Systems security architecture<animate attributeName="opacity" from="0" to="1" begin="0.64s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="182" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ MEMORY ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.68s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="182" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#B388FF" opacity="0">Rust · Python · TypeScript · Bash<animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ FOCUS  ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.76s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#FFB700" opacity="0">CVE scanning · WiFi diag · SDR<animate attributeName="opacity" from="0" to="1" begin="0.80s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="214" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ STATUS ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.84s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="214" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#00FF66" opacity="0">Active - Building CVE storage<animate attributeName="opacity" from="0" to="1" begin="0.88s" dur="0.2s" fill="freeze"/></text>
-  <text x="130" y="230" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" opacity="0"><tspan font-weight="bold" fill="#FF3E3E">[ METHOD ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.92s" dur="0.2s" fill="freeze"/></text>
-  <text x="210" y="230" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#FF9E80" opacity="0">Linux-first, minimal, defensive<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.2s" fill="freeze"/></text>
-  <rect x="130" y="239" width="8" height="12" fill="#00F0FF" opacity="0"><animate attributeName="opacity" values="0;1;1;0" dur="1.0s" repeatCount="indefinite"/></rect>
-  <text x="20" y="269" font-size="9" fill="#5A6578" font-weight="bold">STATUS // STORAGE_ENGAGED : ACTIVE</text>
-  <rect x="348" y="262" width="10" height="8" fill="#FF3E3E" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="363" y="262" width="10" height="8" fill="#FFB700" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.25s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="378" y="262" width="10" height="8" fill="#00FF66" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.30s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="393" y="262" width="10" height="8" fill="#00F0FF" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="408" y="262" width="10" height="8" fill="#B388FF" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="423" y="262" width="10" height="8" fill="#FF9E80" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.45s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="438" y="262" width="10" height="8" fill="#FF4081" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.50s" dur="0.2s" fill="freeze"/></rect>
-  <rect x="453" y="262" width="10" height="8" fill="#E2E8F0" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.55s" dur="0.2s" fill="freeze"/></rect>
+:root {
+  --bg: #0B0C10;
+  --surface: #10131B;
+  --border: #1F2430;
+  --border-bright: #3F4D66;
+  --text: #E2E8F0;
+  --dim: #5A6578;
+  --red: #FF3E3E;
+  --green: #00FF66;
+  --blue: #00F0FF;
+  --amber: #FFB700;
+  --yellow: #FFB700;
+  --mauve: #B388FF;
+  --peach: #FF9E80;
+  --pink: #FF4081;
+  --teal: #00F0FF;
+  --cell-0: #12151D;
+  --cell-1: #0D3A1F;
+  --cell-2: #145E32;
+  --cell-3: #218C4A;
+  --cell-4: #2DBC62;
+  --cell-5: #00FF66; 
+}
+@media (prefers-color-scheme: light) {
+:root {
+  --bg: #E8ECF1;
+  --surface: #DCE3EB;
+  --border: #B6C0CE;
+  --border-bright: #6B7A8F;
+  --text: #171B23;
+  --dim: #5A6578;
+  --red: #C02626;
+  --green: #00A64E;
+  --blue: #00A6C8;
+  --amber: #A87A00;
+  --yellow: #A87A00;
+  --mauve: #7A4DD0;
+  --peach: #C85A2E;
+  --pink: #C2276A;
+  --teal: #00A6C8;
+  --cell-0: #E8ECF1;
+  --cell-1: #B4E5C0;
+  --cell-2: #6CD48A;
+  --cell-3: #2DB15E;
+  --cell-4: #1E8A48;
+  --cell-5: #00A64E; 
+}
+}
+text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+}
+</style>
+  <rect width="490" height="280" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="110" y1="0" x2="110" y2="280" stroke="var(--border)" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="0" y1="26" x2="490" y2="26" stroke="var(--border)" stroke-width="1"/>
+  <line x1="0" y1="254" x2="490" y2="254" stroke="var(--border)" stroke-width="1"/>
+  <text x="6" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="477" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="6" y="274" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="477" y="274" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <rect x="20" y="10" width="6" height="6" fill="var(--green)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></rect>
+  <text x="32" y="16" font-size="9" font-weight="bold" fill="var(--green)">[ SESSION: ACTIVE ]</text>
+  <text x="245" y="16" text-anchor="middle" font-size="9" fill="var(--dim)" font-weight="bold">TELEMETRY CORE // CONSOLE v2.0</text>
+  <text x="470" y="16" text-anchor="end" font-size="9" fill="var(--red)" font-weight="bold">SEC_LEVEL: HIGH</text>
+  <text x="20" y="55" font-size="12" fill="var(--blue)" font-weight="bold" opacity="0">  .──▲──.  <animate attributeName="opacity" from="0" to="1" begin="0.10s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="73" font-size="12" fill="var(--blue)" font-weight="bold" opacity="0"> /   │   \ <animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="91" font-size="12" fill="var(--green)" font-weight="bold" opacity="0">◄───[●]───►<animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="109" font-size="12" fill="var(--blue)" font-weight="bold" opacity="0"> \   │   / <animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="127" font-size="12" fill="var(--blue)" font-weight="bold" opacity="0">  '──▼──'  <animate attributeName="opacity" from="0" to="1" begin="0.30s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="145" font-size="12" fill="var(--green)" font-weight="bold" opacity="0">  [READY]  <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="55" font-size="14" font-weight="bold" fill="var(--blue)" opacity="0">Mr-IR0k-oo1@mainframe<animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="68" font-size="10" fill="var(--dim)" opacity="0">──────────────────────────────────────────<animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="86" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ OS     ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="86" font-size="11" fill="var(--blue)" opacity="0">Arch Linux x86_64<animate attributeName="opacity" from="0" to="1" begin="0.24s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="102" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ HOST   ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.28s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="102" font-size="11" fill="var(--text)" opacity="0">Linux Kernel 6.x // Hardened<animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="118" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ SHELL  ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.36s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="118" font-size="11" fill="var(--text)" opacity="0">bash 5.2.26-release<animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="134" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ EDITOR ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="134" font-size="11" fill="var(--green)" opacity="0">Neovim 0.10.x + tmux 3.4<animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="150" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ TERM   ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.52s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="150" font-size="11" fill="var(--text)" opacity="0">Alacritty // Minimal &amp; Fast<animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="166" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ CPU    ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.60s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="166" font-size="11" fill="var(--peach)" opacity="0">Systems security architecture<animate attributeName="opacity" from="0" to="1" begin="0.64s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="182" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ MEMORY ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.68s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="182" font-size="11" fill="var(--mauve)" opacity="0">Rust · Python · TypeScript · Bash<animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="198" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ FOCUS  ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.76s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="198" font-size="11" fill="var(--amber)" opacity="0">CVE scanning · WiFi diag · SDR<animate attributeName="opacity" from="0" to="1" begin="0.80s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="214" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ STATUS ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.84s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="214" font-size="11" fill="var(--green)" opacity="0">Active - Building CVE storage<animate attributeName="opacity" from="0" to="1" begin="0.88s" dur="0.2s" fill="freeze"/></text>
+  <text x="130" y="230" font-size="11" opacity="0"><tspan font-weight="bold" fill="var(--red)">[ METHOD ]</tspan><animate attributeName="opacity" from="0" to="1" begin="0.92s" dur="0.2s" fill="freeze"/></text>
+  <text x="210" y="230" font-size="11" fill="var(--peach)" opacity="0">Linux-first, minimal, defensive<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.2s" fill="freeze"/></text>
+  <rect x="130" y="239" width="8" height="12" fill="var(--blue)" opacity="0"><animate attributeName="opacity" values="0;1;1;0" dur="1.0s" repeatCount="indefinite"/></rect>
+  <text x="20" y="269" font-size="9" fill="var(--dim)" font-weight="bold">STATUS // STORAGE_ENGAGED : ACTIVE</text>
+  <rect x="348" y="262" width="10" height="8" fill="var(--red)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="363" y="262" width="10" height="8" fill="var(--amber)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.25s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="378" y="262" width="10" height="8" fill="var(--green)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.30s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="393" y="262" width="10" height="8" fill="var(--blue)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="408" y="262" width="10" height="8" fill="var(--mauve)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="423" y="262" width="10" height="8" fill="var(--peach)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.45s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="438" y="262" width="10" height="8" fill="var(--pink)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.50s" dur="0.2s" fill="freeze"/></rect>
+  <rect x="453" y="262" width="10" height="8" fill="var(--text)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.55s" dur="0.2s" fill="freeze"/></rect>
 </svg>

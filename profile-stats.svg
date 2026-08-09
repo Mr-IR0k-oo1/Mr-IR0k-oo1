@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="478" viewBox="0 0 520 478">
+  <style>
+:root {
+  --bg: #0B0C10;
+  --surface: #10131B;
+  --border: #1F2430;
+  --border-bright: #3F4D66;
+  --text: #E2E8F0;
+  --dim: #5A6578;
+  --red: #FF3E3E;
+  --green: #00FF66;
+  --blue: #00F0FF;
+  --amber: #FFB700;
+  --yellow: #FFB700;
+  --mauve: #B388FF;
+  --peach: #FF9E80;
+  --pink: #FF4081;
+  --teal: #00F0FF;
+  --cell-0: #12151D;
+  --cell-1: #0D3A1F;
+  --cell-2: #145E32;
+  --cell-3: #218C4A;
+  --cell-4: #2DBC62;
+  --cell-5: #00FF66; 
+}
+@media (prefers-color-scheme: light) {
+:root {
+  --bg: #E8ECF1;
+  --surface: #DCE3EB;
+  --border: #B6C0CE;
+  --border-bright: #6B7A8F;
+  --text: #171B23;
+  --dim: #5A6578;
+  --red: #C02626;
+  --green: #00A64E;
+  --blue: #00A6C8;
+  --amber: #A87A00;
+  --yellow: #A87A00;
+  --mauve: #7A4DD0;
+  --peach: #C85A2E;
+  --pink: #C2276A;
+  --teal: #00A6C8;
+  --cell-0: #E8ECF1;
+  --cell-1: #B4E5C0;
+  --cell-2: #6CD48A;
+  --cell-3: #2DB15E;
+  --cell-4: #1E8A48;
+  --cell-5: #00A64E; 
+}
+}
+text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+}
+</style>
+  <rect width="520" height="478" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="0" y1="26" x2="520" y2="26" stroke="var(--border)" stroke-width="1"/>
+  <line x1="0" y1="452" x2="520" y2="452" stroke="var(--border)" stroke-width="1"/>
+  <text x="6" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="507" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="6" y="472" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="507" y="472" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <rect x="20" y="10" width="6" height="6" fill="var(--green)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></rect>
+  <text x="32" y="16" font-size="9" font-weight="bold" fill="var(--green)">[ CONSOLE: PROFILER ]</text>
+  <text x="260" y="16" text-anchor="middle" font-size="9" fill="var(--dim)" font-weight="bold">IDENTITY // REPOSITORY_TELEMETRY</text>
+  <text x="500" y="16" text-anchor="end" font-size="9" fill="var(--red)" font-weight="bold">GIT_TRAIL: VISIBLE</text>
+  <text x="20" y="58" font-size="11" fill="var(--blue)">mr-ir0k-oo1@mainframe:~$ python -c "import me"</text>
+  <text x="20" y="80" font-size="13" font-weight="bold" fill="var(--text)">Mr-IR0k-oo1</text>
+  <text x="20" y="102" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[    followers ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  12</tspan></text>
+  <text x="20" y="124" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[    following ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  24</tspan></text>
+  <text x="20" y="146" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[ public repos ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  9</tspan></text>
+  <text x="20" y="168" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[ stars received ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  31</tspan></text>
+  <text x="20" y="190" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[        forks ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  4</tspan></text>
+  <text x="20" y="212" font-size="12"><tspan fill="var(--blue)" font-weight="bold">[ member since ]</tspan><tspan fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  2023</tspan></text>
+  <text x="20" y="240" font-size="11" fill="var(--blue)">mr-ir0k-oo1@mainframe:~$ du -sh ~/languages</text>
+  <text x="20" y="262" font-size="11" fill="#dea584" font-weight="bold">        Rust</text>
+  <text x="170" y="262" font-size="11" fill="var(--dim)">59.8%</text>
+  <rect x="20" y="272" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="272" width="155.5" height="6" fill="#dea584" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <text x="20" y="290" font-size="11" fill="#3572a5" font-weight="bold">      Python</text>
+  <text x="170" y="290" font-size="11" fill="var(--dim)">23.9%</text>
+  <rect x="20" y="300" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="300" width="62.1" height="6" fill="#3572a5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <text x="20" y="318" font-size="11" fill="#3178c6" font-weight="bold">  TypeScript</text>
+  <text x="170" y="318" font-size="11" fill="var(--dim)">8.4%</text>
+  <rect x="20" y="328" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="328" width="21.8" height="6" fill="#3178c6" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <text x="20" y="346" font-size="11" fill="#89e051" font-weight="bold">       Shell</text>
+  <text x="170" y="346" font-size="11" fill="var(--dim)">4.4%</text>
+  <rect x="20" y="356" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="356" width="11.4" height="6" fill="#89e051" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <text x="20" y="374" font-size="11" fill="#e34c26" font-weight="bold">        HTML</text>
+  <text x="170" y="374" font-size="11" fill="var(--dim)">2.2%</text>
+  <rect x="20" y="384" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="384" width="5.7" height="6" fill="#e34c26" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <text x="20" y="402" font-size="11" fill="#563d7c" font-weight="bold">         CSS</text>
+  <text x="170" y="402" font-size="11" fill="var(--dim)">1.0%</text>
+  <rect x="20" y="412" width="260" height="6" fill="var(--surface)"/>
+  <rect x="20" y="412" width="2.5" height="6" fill="#563d7c" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="419" width="8" height="14" fill="var(--text)" opacity="0"><animate attributeName="opacity" values="0;1;1;0" dur="1.2s" repeatCount="indefinite"/></rect>
+  <text x="20" y="467" font-size="9" fill="var(--dim)" font-weight="bold">INDEX // FOLLOWERS_LINKED : OK</text>
+  <text x="500" y="467" font-size="9" fill="var(--dim)" font-weight="bold" text-anchor="end">GRAVITY_WELL: GITHUB.COM/MR-IR0K-OO1</text>
+</svg>

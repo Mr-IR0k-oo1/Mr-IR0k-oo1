@@ -1,44 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280">
   <style>
-    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.02em; }
-  </style>
-  <rect width="490" height="280" fill="#0B0C10" stroke="#1F2430" stroke-width="1.5"/>
-  <line x1="0" y1="26" x2="490" y2="26" stroke="#1F2430" stroke-width="1"/>
-  <line x1="0" y1="254" x2="490" y2="254" stroke="#1F2430" stroke-width="1"/>
-  <text x="6" y="12" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="477" y="12" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="6" y="274" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <text x="477" y="274" font-size="9" fill="#5A6578" font-weight="bold">+</text>
-  <rect x="20" y="10" width="6" height="6" fill="#00F0FF"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></rect>
-  <text x="32" y="16" font-size="9" font-weight="bold" fill="#00F0FF">[ DIRECTORY: ~/PROJECTS ]</text>
-  <text x="245" y="16" text-anchor="middle" font-size="9" fill="#5A6578" font-weight="bold">WORKSPACE MODULES // QUERY_OK</text>
-  <text x="470" y="16" text-anchor="end" font-size="9" fill="#FF3E3E" font-weight="bold">TARGET_NODES: 04</text>
-  <text x="20" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#00F0FF">$ workspace --query-active --verbose</text>
-  <rect x="20" y="60" width="450" height="40" fill="#10131B" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></rect>
-  <line x1="90" y1="60" x2="90" y2="100" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></line>
-  <text x="55" y="84" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="bold" fill="#00FF66" text-anchor="middle" opacity="0"> ACTIVE <animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#E2E8F0" opacity="0">cve-scanner<animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
-  <text x="458" y="76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="bold" fill="#FF9E80" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.23s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="90" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" opacity="0">CVE correlation engine — NVD + EPSS risk scoring<animate attributeName="opacity" from="0" to="1" begin="0.23s" dur="0.2s" fill="freeze"/></text>
-  <rect x="20" y="106" width="450" height="40" fill="#10131B" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.27s" dur="0.2s" fill="freeze"/></rect>
-  <line x1="90" y1="106" x2="90" y2="146" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.27s" dur="0.2s" fill="freeze"/></line>
-  <text x="55" y="130" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="bold" fill="#00FF66" text-anchor="middle" opacity="0"> ACTIVE <animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="122" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#E2E8F0" opacity="0">wifi-diag<animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
-  <text x="458" y="122" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="bold" fill="#00F0FF" text-anchor="end" opacity="0">[ PYTHON ]<animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="136" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" opacity="0">802.11 packet sniffer → rogue-AP detection module<animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
-  <rect x="20" y="152" width="450" height="40" fill="#10131B" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.2s" fill="freeze"/></rect>
-  <line x1="90" y1="152" x2="90" y2="192" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.2s" fill="freeze"/></line>
-  <text x="55" y="176" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="bold" fill="#FFB700" text-anchor="middle" opacity="0"> STAGED <animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="168" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#E2E8F0" opacity="0">ai-orchestrator<animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
-  <text x="458" y="168" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="bold" fill="#FF9E80" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.47s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="182" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" opacity="0">Terminal memory layer for multi-CLI agents<animate attributeName="opacity" from="0" to="1" begin="0.47s" dur="0.2s" fill="freeze"/></text>
-  <rect x="20" y="198" width="450" height="40" fill="#10131B" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.51s" dur="0.2s" fill="freeze"/></rect>
-  <line x1="90" y1="198" x2="90" y2="238" stroke="#1F2430" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.51s" dur="0.2s" fill="freeze"/></line>
-  <text x="55" y="222" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="bold" fill="#FFB700" text-anchor="middle" opacity="0"> STAGED <animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="214" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#E2E8F0" opacity="0">sdr-tracker<animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
-  <text x="458" y="214" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="bold" fill="#FF9E80" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.59s" dur="0.2s" fill="freeze"/></text>
-  <text x="105" y="228" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#5A6578" opacity="0">SGP4 orbital propagation + IQ raw processing pipelines<animate attributeName="opacity" from="0" to="1" begin="0.59s" dur="0.2s" fill="freeze"/></text>
-  <text x="20" y="269" font-size="9" fill="#5A6578" font-weight="bold">ACTIVE_REPOS // INGESTION : NOMINAL</text>
-  <text x="470" y="269" font-size="9" fill="#5A6578" font-weight="bold" text-anchor="end">NODES_ONLINE: 04 // STREAM: OK</text>
+:root {
+  --bg: #0B0C10;
+  --surface: #10131B;
+  --border: #1F2430;
+  --border-bright: #3F4D66;
+  --text: #E2E8F0;
+  --dim: #5A6578;
+  --red: #FF3E3E;
+  --green: #00FF66;
+  --blue: #00F0FF;
+  --amber: #FFB700;
+  --yellow: #FFB700;
+  --mauve: #B388FF;
+  --peach: #FF9E80;
+  --pink: #FF4081;
+  --teal: #00F0FF;
+  --cell-0: #12151D;
+  --cell-1: #0D3A1F;
+  --cell-2: #145E32;
+  --cell-3: #218C4A;
+  --cell-4: #2DBC62;
+  --cell-5: #00FF66; 
+}
+@media (prefers-color-scheme: light) {
+:root {
+  --bg: #E8ECF1;
+  --surface: #DCE3EB;
+  --border: #B6C0CE;
+  --border-bright: #6B7A8F;
+  --text: #171B23;
+  --dim: #5A6578;
+  --red: #C02626;
+  --green: #00A64E;
+  --blue: #00A6C8;
+  --amber: #A87A00;
+  --yellow: #A87A00;
+  --mauve: #7A4DD0;
+  --peach: #C85A2E;
+  --pink: #C2276A;
+  --teal: #00A6C8;
+  --cell-0: #E8ECF1;
+  --cell-1: #B4E5C0;
+  --cell-2: #6CD48A;
+  --cell-3: #2DB15E;
+  --cell-4: #1E8A48;
+  --cell-5: #00A64E; 
+}
+}
+text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+}
+</style>
+  <rect width="490" height="280" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="0" y1="26" x2="490" y2="26" stroke="var(--border)" stroke-width="1"/>
+  <line x1="0" y1="254" x2="490" y2="254" stroke="var(--border)" stroke-width="1"/>
+  <text x="6" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="477" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="6" y="274" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <text x="477" y="274" font-size="9" fill="var(--dim)" font-weight="bold">+</text>
+  <rect x="20" y="10" width="6" height="6" fill="var(--blue)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></rect>
+  <text x="32" y="16" font-size="9" font-weight="bold" fill="var(--blue)">[ DIRECTORY: ~/PROJECTS ]</text>
+  <text x="245" y="16" text-anchor="middle" font-size="9" fill="var(--dim)" font-weight="bold">WORKSPACE MODULES // QUERY_OK</text>
+  <text x="470" y="16" text-anchor="end" font-size="9" fill="var(--red)" font-weight="bold">TARGET_NODES: 04</text>
+  <text x="20" y="46" font-size="11" fill="var(--blue)">$ workspace --query-active --verbose</text>
+  <rect x="20" y="60" width="450" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></rect>
+  <line x1="90" y1="60" x2="90" y2="100" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.2s" fill="freeze"/></line>
+  <text x="55" y="84" font-size="9" font-weight="bold" fill="var(--green)" text-anchor="middle" opacity="0"> ACTIVE <animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="76" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">cve-scanner<animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.2s" fill="freeze"/></text>
+  <text x="458" y="76" font-size="10" font-weight="bold" fill="var(--peach)" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.23s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="90" font-size="9.5" fill="var(--dim)" opacity="0">CVE correlation engine — NVD + EPSS risk scoring<animate attributeName="opacity" from="0" to="1" begin="0.23s" dur="0.2s" fill="freeze"/></text>
+  <rect x="20" y="106" width="450" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.27s" dur="0.2s" fill="freeze"/></rect>
+  <line x1="90" y1="106" x2="90" y2="146" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.27s" dur="0.2s" fill="freeze"/></line>
+  <text x="55" y="130" font-size="9" font-weight="bold" fill="var(--green)" text-anchor="middle" opacity="0"> ACTIVE <animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="122" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">wifi-diag<animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.2s" fill="freeze"/></text>
+  <text x="458" y="122" font-size="10" font-weight="bold" fill="var(--blue)" text-anchor="end" opacity="0">[ PYTHON ]<animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="136" font-size="9.5" fill="var(--dim)" opacity="0">802.11 packet sniffer → rogue-AP detection module<animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.2s" fill="freeze"/></text>
+  <rect x="20" y="152" width="450" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.2s" fill="freeze"/></rect>
+  <line x1="90" y1="152" x2="90" y2="192" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.2s" fill="freeze"/></line>
+  <text x="55" y="176" font-size="9" font-weight="bold" fill="var(--amber)" text-anchor="middle" opacity="0"> STAGED <animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="168" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">ai-orchestrator<animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.2s" fill="freeze"/></text>
+  <text x="458" y="168" font-size="10" font-weight="bold" fill="var(--peach)" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.47s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="182" font-size="9.5" fill="var(--dim)" opacity="0">Terminal memory layer for multi-CLI agents<animate attributeName="opacity" from="0" to="1" begin="0.47s" dur="0.2s" fill="freeze"/></text>
+  <rect x="20" y="198" width="450" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.51s" dur="0.2s" fill="freeze"/></rect>
+  <line x1="90" y1="198" x2="90" y2="238" stroke="var(--border)" stroke-width="1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.51s" dur="0.2s" fill="freeze"/></line>
+  <text x="55" y="222" font-size="9" font-weight="bold" fill="var(--amber)" text-anchor="middle" opacity="0"> STAGED <animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="214" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">sdr-tracker<animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.2s" fill="freeze"/></text>
+  <text x="458" y="214" font-size="10" font-weight="bold" fill="var(--peach)" text-anchor="end" opacity="0">[ RUST ]<animate attributeName="opacity" from="0" to="1" begin="0.59s" dur="0.2s" fill="freeze"/></text>
+  <text x="105" y="228" font-size="9.5" fill="var(--dim)" opacity="0">SGP4 orbital propagation + IQ raw processing pipelines<animate attributeName="opacity" from="0" to="1" begin="0.59s" dur="0.2s" fill="freeze"/></text>
+  <text x="20" y="269" font-size="9" fill="var(--dim)" font-weight="bold">ACTIVE_REPOS // INGESTION : NOMINAL</text>
+  <text x="470" y="269" font-size="9" fill="var(--dim)" font-weight="bold" text-anchor="end">NODES_ONLINE: 04 // STREAM: OK</text>
 </svg>

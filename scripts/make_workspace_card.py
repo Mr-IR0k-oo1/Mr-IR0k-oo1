@@ -1,55 +1,46 @@
 #!/usr/bin/env python3
-"""Generate a highly-engineered, industrial-brutalist workspace card SVG with tactical terminal aesthetics."""
+"""Generate a highly-engineered, industrial-brutalist workspace card SVG with tactical terminal aesthetics.
+
+Theme-aware: palette comes from theme.css custom properties so the card adapts
+to GitHub light/dark mode while keeping the tactical telemetry look in dark mode.
+"""
 
 import os
 
-# --- Tactical Telemetry Palette (Consistent with info_card) ---
-BG            = "#0B0C10"  # Deep space/charcoal technical background
-BORDER        = "#1F2430"  # Dark steel grid line
-BORDER_BRIGHT = "#3F4D66"  # Active frame highlight
-TEXT          = "#E2E8F0"  # Crisp off-white phosphor text
-DIM           = "#5A6578"  # Blueprint slate gray for metadata
-
-# Accent Colors
-RED           = "#FF3E3E"  # Aviation hazard / alarm red
-GREEN         = "#00FF66"  # Matrix phosphor active green
-BLUE          = "#00F0FF"  # Hyper-cyber blue/teal
-AMBER         = "#FFB700"  # Tactical warning amber
-MAUVE         = "#B388FF"  # High-altitude purple
-PEACH         = "#FF9E80"  # Sensor-range orange
+import theme
 
 # --- Selected Projects Database ---
 PROJECTS = [
     {
         "name": "cve-scanner",
         "lang": "Rust",
-        "lang_color": PEACH,
+        "lang_color": "var(--peach)",
         "status": "ACTIVE",
-        "status_color": GREEN,
+        "status_color": "var(--green)",
         "desc": "CVE correlation engine — NVD + EPSS risk scoring",
     },
     {
         "name": "wifi-diag",
         "lang": "Python",
-        "lang_color": BLUE,
+        "lang_color": "var(--blue)",
         "status": "ACTIVE",
-        "status_color": GREEN,
+        "status_color": "var(--green)",
         "desc": "802.11 packet sniffer → rogue-AP detection module",
     },
     {
         "name": "ai-orchestrator",
         "lang": "Rust",
-        "lang_color": PEACH,
+        "lang_color": "var(--peach)",
         "status": "STAGED",
-        "status_color": AMBER,
+        "status_color": "var(--amber)",
         "desc": "Terminal memory layer for multi-CLI agents",
     },
     {
         "name": "sdr-tracker",
         "lang": "Rust",
-        "lang_color": PEACH,
+        "lang_color": "var(--peach)",
         "status": "STAGED",
-        "status_color": AMBER,
+        "status_color": "var(--amber)",
         "desc": "SGP4 orbital propagation + IQ raw processing pipelines",
     },
 ]
@@ -68,42 +59,37 @@ def build_svg() -> str:
     lines = []
 
     # --- Container and main grid ---
-    # Sharp 90-degree outer container
-    lines.append(f'<rect width="{W}" height="{H}" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>')
+    lines.append(f'<rect width="{W}" height="{H}" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>')
 
     # Blueprint Grid Lines (aligned with info_card)
-    lines.append(f'<line x1="0" y1="26" x2="{W}" y2="26" stroke="{BORDER}" stroke-width="1"/>')
-    lines.append(f'<line x1="0" y1="254" x2="{W}" y2="254" stroke="{BORDER}" stroke-width="1"/>')
+    lines.append(f'<line x1="0" y1="26" x2="{W}" y2="26" stroke="var(--border)" stroke-width="1"/>')
+    lines.append(f'<line x1="0" y1="254" x2="{W}" y2="254" stroke="var(--border)" stroke-width="1"/>')
 
     # Corner registration crosshairs (+)
-    lines.append(f'<text x="6" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
-    lines.append(f'<text x="{W - 13}" y="12" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
-    lines.append(f'<text x="6" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
-    lines.append(f'<text x="{W - 13}" y="{H - 6}" font-size="9" fill="{DIM}" font-weight="bold">+</text>')
+    lines.append(f'<text x="6" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>')
+    lines.append(f'<text x="{W - 13}" y="12" font-size="9" fill="var(--dim)" font-weight="bold">+</text>')
+    lines.append(f'<text x="6" y="{H - 6}" font-size="9" fill="var(--dim)" font-weight="bold">+</text>')
+    lines.append(f'<text x="{W - 13}" y="{H - 6}" font-size="9" fill="var(--dim)" font-weight="bold">+</text>')
 
     # --- Header bar contents ---
-    # Flashing session status square
     lines.append(
-        f'<rect x="20" y="10" width="6" height="6" fill="{BLUE}">'
+        f'<rect x="20" y="10" width="6" height="6" fill="var(--blue)">'
         f'<animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>'
         f'</rect>'
     )
-    lines.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="{BLUE}">[ DIRECTORY: ~/PROJECTS ]</text>')
+    lines.append(f'<text x="32" y="16" font-size="9" font-weight="bold" fill="var(--blue)">[ DIRECTORY: ~/PROJECTS ]</text>')
 
-    # Centered catalog indicator
     lines.append(
-        f'<text x="{W//2}" y="16" text-anchor="middle" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'<text x="{W//2}" y="16" text-anchor="middle" font-size="9" fill="var(--dim)" font-weight="bold">'
         f'WORKSPACE MODULES // QUERY_OK'
         f'</text>'
     )
 
-    # Right side security warning
-    lines.append(f'<text x="{W - 20}" y="16" text-anchor="end" font-size="9" fill="{RED}" font-weight="bold">TARGET_NODES: 04</text>')
+    lines.append(f'<text x="{W - 20}" y="16" text-anchor="end" font-size="9" fill="var(--red)" font-weight="bold">TARGET_NODES: 04</text>')
 
     # --- Section Subheader (Terminal Command Prompt) ---
     lines.append(
-        f'<text x="20" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-        f'font-size="11" fill="{BLUE}">'
+        f'<text x="20" y="46" font-size="11" fill="var(--blue)">'
         f'$ workspace --query-active --verbose'
         f'</text>'
     )
@@ -117,54 +103,44 @@ def build_svg() -> str:
         delay = 0.15 + i * 0.12
         card_y = card_y_start + i * (card_h + gap)
 
-        # Outer project container box (90-degree corners, crisp borders)
         lines.append(
             f'<rect x="{PAD_X}" y="{card_y}" width="{W - PAD_X*2}" height="{card_h}" '
-            f'fill="#10131B" stroke="{BORDER}" stroke-width="1" opacity="0">'
+            f'fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0">'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</rect>'
         )
 
-        # Tactical Status Partition vertical divider at x=90
         lines.append(
-            f'<line x1="90" y1="{card_y}" x2="90" y2="{card_y + card_h}" stroke="{BORDER}" stroke-width="1" opacity="0">'
+            f'<line x1="90" y1="{card_y}" x2="90" y2="{card_y + card_h}" stroke="var(--border)" stroke-width="1" opacity="0">'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</line>'
         )
 
-        # Left partition: Status bracket text e.g. "ACTIVE" or "STAGED"
         status_text = f" {proj['status']} "
         lines.append(
-            f'<text x="55" y="{card_y + 24}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="9" font-weight="bold" fill="{proj["status_color"]}" text-anchor="middle" opacity="0">'
+            f'<text x="55" y="{card_y + 24}" font-size="9" font-weight="bold" fill="{proj["status_color"]}" text-anchor="middle" opacity="0">'
             f'{esc(status_text)}'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-        # Right partition: Project Name
         lines.append(
-            f'<text x="105" y="{card_y + 16}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="12" font-weight="bold" fill="{TEXT}" opacity="0">'
+            f'<text x="105" y="{card_y + 16}" font-size="12" font-weight="bold" fill="var(--text)" opacity="0">'
             f'{esc(proj["name"])}'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.05:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-        # Right partition: Language Badge (styled in technical brackets e.g. "[ RUST ]" right-aligned)
         lang_str = f"[ {proj['lang'].upper()} ]"
         lines.append(
-            f'<text x="{W - 32}" y="{card_y + 16}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="10" font-weight="bold" fill="{proj["lang_color"]}" text-anchor="end" opacity="0">'
+            f'<text x="{W - 32}" y="{card_y + 16}" font-size="10" font-weight="bold" fill="{proj["lang_color"]}" text-anchor="end" opacity="0">'
             f'{esc(lang_str)}'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
         )
 
-        # Right partition: Description Payload
         lines.append(
-            f'<text x="105" y="{card_y + 30}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
-            f'font-size="9.5" fill="{DIM}" opacity="0">'
+            f'<text x="105" y="{card_y + 30}" font-size="9.5" fill="var(--dim)" opacity="0">'
             f'{esc(proj["desc"])}'
             f'<animate attributeName="opacity" from="0" to="1" begin="{delay + 0.08:.2f}s" dur="0.2s" fill="freeze"/>'
             f'</text>'
@@ -172,12 +148,12 @@ def build_svg() -> str:
 
     # --- Bottom bar content ---
     lines.append(
-        f'<text x="20" y="269" font-size="9" fill="{DIM}" font-weight="bold">'
+        f'<text x="20" y="269" font-size="9" fill="var(--dim)" font-weight="bold">'
         f'ACTIVE_REPOS // INGESTION : NOMINAL'
         f'</text>'
     )
     lines.append(
-        f'<text x="{W - 20}" y="269" font-size="9" fill="{DIM}" font-weight="bold" text-anchor="end">'
+        f'<text x="{W - 20}" y="269" font-size="9" fill="var(--dim)" font-weight="bold" text-anchor="end">'
         f'NODES_ONLINE: 04 // STREAM: OK'
         f'</text>'
     )
@@ -186,9 +162,7 @@ def build_svg() -> str:
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-  <style>
-    text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.02em; }}
-  </style>
+  {theme.css()}
   {svg_body}
 </svg>'''
 

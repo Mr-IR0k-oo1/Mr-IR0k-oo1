@@ -76,7 +76,7 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 
 <div align="center">
 
-<img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=Mr-IR0k-oo1&hide_border=true&background=00000000&ring=2d2d2d&fire=2d2d2d&currStreakLabel=2d2d2d&sideNums=2d2d2d&sideLabels=555555&dates=555555&currStreakNum=2d2d2d&stroke=2d2d2d" />
+<img src="./profile-stats.svg" width="520" />
 
 </div>
 
