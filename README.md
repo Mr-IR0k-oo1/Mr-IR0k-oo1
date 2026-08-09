@@ -1,26 +1,28 @@
 <div align="center">
 
-<h1>Mr-IR0k-oo1</h1>
+# Mr-IR0k-oo1
 
-<p>Systems-focused developer — Rust, cybersecurity, and AI infrastructure.</p>
-<p><sub>Correctness and security are requirements, not features.</sub></p>
+**Systems-focused developer** — Rust, cybersecurity, and AI infrastructure.
 
-<br/>
+> Correctness and security are requirements, not features.
 
-<img src="https://img.shields.io/badge/status-actively%20building-2d2d2d?style=flat-square&labelColor=1a1a1a" />
-<img src="https://img.shields.io/badge/platform-linux-2d2d2d?style=flat-square&labelColor=1a1a1a" />
-<img src="https://img.shields.io/badge/focus-systems%20%26%20security-2d2d2d?style=flat-square&labelColor=1a1a1a" />
+![status](https://img.shields.io/badge/status-actively%20building-2d2d2d?style=flat-square&labelColor=1a1a1a)
+![platform](https://img.shields.io/badge/platform-linux-2d2d2d?style=flat-square&labelColor=1a1a1a)
+![focus](https://img.shields.io/badge/focus-systems%20%26%20security-2d2d2d?style=flat-square&labelColor=1a1a1a)
 
 </div>
 
-<br/>
+---
 
-<h3><code>Mr-IR0k-oo1@github ~ $ ./contributions.sh</code></h3>
+## Contribution Activity
+
+`Mr-IR0k-oo1@github ~ $ ./contributions.sh`
+
 <div align="center">
-<img src="./contrib-heatmap.svg" width="946" />
+<img src="./contrib-heatmap.svg" width="946" alt="52-week contribution heatmap" />
 </div>
 
-<br/>
+---
 
 ## About
 
@@ -28,7 +30,7 @@ I build systems-level software where correctness and security aren't negotiable 
 
 I care more about a system being small enough to fully understand than about it being feature-complete. Most of what I build starts as a narrow, correct core, then earns additional scope only once that core has been tested and broken on purpose.
 
-<br/>
+---
 
 ## How I Work
 
@@ -46,7 +48,7 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 - Memory-safe by default, defensive by design
 - If it can't be explained simply, it isn't finished
 
-<br/>
+---
 
 ## Stack
 
@@ -70,29 +72,29 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 
 </div>
 
-<br/>
+---
 
 ## GitHub Stats
 
 <div align="center">
 
-<img src="./profile-stats.svg" width="520" />
+<img src="./profile-stats.svg" width="520" alt="Profile stats and top languages" />
 
 </div>
 
-<br/>
+---
 
-## Now
+## Currently Working On
 
-Actively building the CVE scanning engine's storage layer and finishing the WiFi diagnostic toolkit's rogue-AP detection module. Longer term: shipping more of the AI orchestration layer as a standalone, reusable tool.
+Building the CVE scanning engine's storage layer and finishing the WiFi diagnostic toolkit's rogue-AP detection module. Longer term: shipping more of the AI orchestration layer as a standalone, reusable tool.
 
-<br/>
+---
 
-## Contributions
+## Contributing
 
 Pull requests are welcome when they improve clarity, security, or performance, and include clear justification for the change. Issues without a reproducible case or a clear proposed fix are unlikely to be prioritized.
 
-<br/>
+---
 
 ## Contact
 
@@ -103,7 +105,7 @@ Pull requests are welcome when they improve clarity, security, or performance, a
 
 </div>
 
-<br/>
+---
 
 <div align="center">
 <sub>Actively iterating — expect refactors.</sub>
