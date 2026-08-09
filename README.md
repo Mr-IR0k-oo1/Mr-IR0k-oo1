@@ -22,15 +22,6 @@
 
 <br/>
 
-<table>
-  <tr>
-    <td valign="top"><img src="./info-card.svg" width="490" /></td>
-    <td valign="top"><img src="./workspace-card.svg" width="490" /></td>
-  </tr>
-</table>
-
-<br/>
-
 ## About
 
 I build systems-level software where correctness and security aren't negotiable — primarily in Rust, with a focus on cybersecurity tooling, backend infrastructure, and AI systems. My workflow is Linux-first, minimal, and hardened by default.
