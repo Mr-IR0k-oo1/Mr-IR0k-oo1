@@ -22,7 +22,6 @@
 
 <br/>
 
-<h3><code>Mr-IR0k-oo1@github ~ $ neofetch</code></h3>
 <table>
   <tr>
     <td valign="top"><img src="./info-card.svg" width="490" /></td>
@@ -109,6 +108,7 @@ Pull requests are welcome when they improve clarity, security, or performance, a
 <div align="center">
 
 <a href="https://github.com/Mr-IR0k-oo1"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://ir0k.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white" /></a>
 
 </div>
 
