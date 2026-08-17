@@ -71,7 +71,7 @@ text {
   <text x="20" y="58" font-size="11" fill="var(--blue)">mr-ir0k-oo1@mainframe:~$ python -c "import me"</text>
   <text x="20" y="80" font-size="13" font-weight="bold" fill="var(--text)">Irok_001</text>
   <text x="20" y="102" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ followers ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  18</tspan></text>
-  <text x="20" y="124" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ following ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  22</tspan></text>
+  <text x="20" y="124" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ following ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  23</tspan></text>
   <text x="20" y="146" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ public repos ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  43</tspan></text>
   <text x="20" y="168" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ stars received ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  1</tspan></text>
   <text x="20" y="190" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ forks ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  5</tspan></text>
