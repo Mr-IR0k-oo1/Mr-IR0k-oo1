@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-08-18",
+  "fetched_at": "2026-08-19",
   "days": [
     {
       "date": "2025-08-17",
@@ -1834,14 +1834,19 @@
     },
     {
       "date": "2026-08-18",
+      "level": 4,
+      "count": 12
+    },
+    {
+      "date": "2026-08-19",
       "level": 0,
       "count": 0
     }
   ],
   "stats": {
-    "total": 970,
+    "total": 986,
     "current_streak": 0,
-    "longest_streak": 31,
+    "longest_streak": 32,
     "best_day": {
       "date": "2025-09-15",
       "level": 4
@@ -1859,7 +1864,7 @@
       "2026-05": 72,
       "2026-06": 118,
       "2026-07": 110,
-      "2026-08": 84
+      "2026-08": 96
     }
   }
 }
