@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-08-22T07:00:37.858901+00:00",
+  "fetched_at": "2026-08-23T07:02:05.496149+00:00",
   "user": {
     "name": "Irok_001",
     "bio": null,
@@ -16,25 +16,22 @@
     "total_forks": 5
   },
   "languages": {
-    "Rust": 3899547,
-    "HTML": 1491990,
+    "Rust": 3328170,
+    "HTML": 873293,
     "PowerShell": 4263,
-    "Shell": 32187,
-    "Dockerfile": 14695,
-    "Python": 680386,
+    "Shell": 30041,
+    "Dockerfile": 7831,
+    "Python": 278183,
     "CMake": 8223,
-    "Makefile": 8876686,
+    "Makefile": 8868837,
     "DTrace": 19985,
-    "TypeScript": 3824350,
-    "JavaScript": 292058,
-    "CSS": 281780,
+    "TypeScript": 1369549,
+    "JavaScript": 211927,
+    "CSS": 170265,
     "Java": 14752,
     "C++": 8449,
     "C#": 7592,
     "Go": 6470,
-    "RouterOS Script": 89950,
-    "PLpgSQL": 27518,
-    "GLSL": 1497,
-    "RenderScript": 1
+    "RouterOS Script": 89950
   }
 }
