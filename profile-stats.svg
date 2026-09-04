@@ -78,25 +78,25 @@ text {
   <text x="20" y="212" font-size="12"><tspan text-anchor="end" x="178" fill="var(--blue)" font-weight="bold">[ member since ]</tspan><tspan x="188" fill="var(--dim)"> =</tspan><tspan fill="var(--text)">  2021</tspan></text>
   <text x="20" y="240" font-size="11" fill="var(--blue)">mr-ir0k-oo1@mainframe:~$ du -sh ~/languages</text>
   <text x="20" y="262" font-size="11" fill="#427819" font-weight="bold">    Makefile</text>
-  <text x="170" y="262" font-size="11" fill="var(--dim)">45.7%</text>
+  <text x="170" y="262" font-size="11" fill="var(--dim)">45.0%</text>
   <rect x="20" y="272" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="272" width="118.9" height="6" fill="#427819" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="272" width="117.0" height="6" fill="#427819" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="290" font-size="11" fill="#dea584" font-weight="bold">        Rust</text>
-  <text x="170" y="290" font-size="11" fill="var(--dim)">20.0%</text>
+  <text x="170" y="290" font-size="11" fill="var(--dim)">20.5%</text>
   <rect x="20" y="300" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="300" width="52.0" height="6" fill="#dea584" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="300" width="53.2" height="6" fill="#dea584" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="318" font-size="11" fill="#3178c6" font-weight="bold">  TypeScript</text>
-  <text x="170" y="318" font-size="11" fill="var(--dim)">19.3%</text>
+  <text x="170" y="318" font-size="11" fill="var(--dim)">19.4%</text>
   <rect x="20" y="328" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="328" width="50.1" height="6" fill="#3178c6" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="328" width="50.4" height="6" fill="#3178c6" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="346" font-size="11" fill="#e34c26" font-weight="bold">        HTML</text>
-  <text x="170" y="346" font-size="11" fill="var(--dim)">7.5%</text>
+  <text x="170" y="346" font-size="11" fill="var(--dim)">7.6%</text>
   <rect x="20" y="356" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="356" width="19.5" height="6" fill="#e34c26" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="356" width="19.7" height="6" fill="#e34c26" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="374" font-size="11" fill="#3572a5" font-weight="bold">      Python</text>
-  <text x="170" y="374" font-size="11" fill="var(--dim)">3.4%</text>
+  <text x="170" y="374" font-size="11" fill="var(--dim)">3.5%</text>
   <rect x="20" y="384" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="384" width="8.9" height="6" fill="#3572a5" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="384" width="9.1" height="6" fill="#3572a5" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="402" font-size="11" fill="#f1e05a" font-weight="bold">  JavaScript</text>
   <text x="170" y="402" font-size="11" fill="var(--dim)">1.5%</text>
   <rect x="20" y="412" width="260" height="6" fill="var(--surface)"/>

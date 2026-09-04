@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-09-03T11:17:34.598847+00:00",
+  "fetched_at": "2026-09-04T11:21:00.474174+00:00",
   "user": {
     "name": "Irok_001",
     "bio": null,
@@ -16,15 +16,16 @@
     "total_forks": 5
   },
   "languages": {
-    "Makefile": 9083292,
-    "Rust": 3970788,
-    "Python": 683246,
+    "Rust": 4039177,
+    "Python": 691025,
     "Solidity": 1297,
+    "PowerShell": 4370,
+    "Batchfile": 94,
     "HTML": 1491990,
-    "PowerShell": 4263,
     "Shell": 32187,
     "Dockerfile": 14695,
     "CMake": 8223,
+    "Makefile": 8876686,
     "DTrace": 19985,
     "TypeScript": 3824350,
     "JavaScript": 292058,
