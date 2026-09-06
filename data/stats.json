@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-09-05T10:38:00.673059+00:00",
+  "fetched_at": "2026-09-06T11:00:21.834654+00:00",
   "user": {
     "name": "Irok_001",
     "bio": null,
@@ -16,8 +16,8 @@
     "total_forks": 5
   },
   "languages": {
-    "Rust": 4336696,
     "Python": 691025,
+    "Rust": 4336696,
     "Solidity": 1297,
     "PowerShell": 4370,
     "Batchfile": 94,
