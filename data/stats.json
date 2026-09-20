@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-09-19T11:02:52.939258+00:00",
+  "fetched_at": "2026-09-20T11:27:34.395852+00:00",
   "user": {
     "name": "Irok_001",
     "bio": null,
@@ -16,10 +16,10 @@
     "total_forks": 5
   },
   "languages": {
-    "Python": 729121,
-    "TypeScript": 3994046,
+    "TypeScript": 4155120,
     "Rust": 4690100,
-    "CSS": 367758,
+    "Python": 729121,
+    "CSS": 368070,
     "Shell": 33886,
     "C": 2116,
     "Dockerfile": 18046,
