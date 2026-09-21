@@ -36,3 +36,14 @@ Single monospace stack: `ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 
 ## 5. Layout Principles
 Strict blueprint grid — everything aligns to hairline dividers, with 26px structural bars top and bottom. Terminal logic: prompts left, telemetry centered, status right. Heatmap uses a 7-row week matrix; consistent 20px window padding; density over whitespace; information presented as instrument readouts rather than marketing copy.
+
+## 6. README Composition (profile readout)
+
+`README.md` is part of the same system as the cards. Rules:
+
+- **All four cards are mounted** — `info-card.svg`, `workspace-card.svg`, `contrib-heatmap.svg`, `profile-stats.svg`. Never ship an orphaned card.
+- **Section headers:** `## \`[ CATEGORY: SUBJECT ]\`` — uppercase, bracketed, monospace, left-aligned. No numbering, no decorative kickers.
+- **Mount order:** SYSTEM (identity) → WORKSPACE (active modules) → ACTIVITY (heatmap) → TELEMETRY (stats) → ABOUT → METHOD → TOOLCHAIN → CONTACT.
+- **Display widths:** info-card 490 · workspace-card 490 · contrib-heatmap 860 · profile-stats 520, each centered in `<div align="center">`.
+- **No third-party status badges in the header** — identity is carried by the info card.
+- **Alt text mirrors each card's `<desc>`** so the readout degrades gracefully.

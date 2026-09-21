@@ -6,33 +6,49 @@
 
 > Correctness and security are requirements, not features.
 
-![status](https://img.shields.io/badge/status-actively%20building-2d2d2d?style=flat-square&labelColor=1a1a1a)
-![platform](https://img.shields.io/badge/platform-linux-2d2d2d?style=flat-square&labelColor=1a1a1a)
-![focus](https://img.shields.io/badge/focus-systems%20%26%20security-2d2d2d?style=flat-square&labelColor=1a1a1a)
-
 </div>
 
----
-
-## Contribution Activity
-
-`Mr-IR0k-oo1@github ~ $ ./contributions.sh`
+## `[ SYSTEM: IDENTITY ]`
 
 <div align="center">
-<img src="./contrib-heatmap.svg" width="946" alt="52-week contribution heatmap" />
+
+<img src="./info-card.svg" width="490" alt="System profile — Arch Linux, Neovim + tmux, Rust · Python · TypeScript · Bash; status: actively building CVE storage." />
+
 </div>
 
----
+## `[ WORKSPACE: ACTIVE_MODULES ]`
 
-## About
+<div align="center">
+
+<img src="./workspace-card.svg" width="490" alt="Active projects — cve-scanner, wifi-diag, ai-orchestrator, sdr-tracker." />
+
+</div>
+
+Currently winding up the CVE scanning engine's storage layer and the WiFi diagnostic toolkit's rogue-AP detection module. Longer term: shipping more of the AI orchestration layer as a standalone, reusable tool.
+
+## `[ ACTIVITY: LAST_52_WEEKS ]`
+
+<div align="center">
+
+<img src="./contrib-heatmap.svg" width="860" alt="Contribution heatmap — 1,206 contributions over the past 52 weeks, current streak 65 days." />
+
+</div>
+
+## `[ TELEMETRY: ACCOUNT ]`
+
+<div align="center">
+
+<img src="./profile-stats.svg" width="520" alt="Account telemetry — 45 public repositories; top languages Makefile, Rust, TypeScript, HTML, Python." />
+
+</div>
+
+## `[ PROFILE: ABOUT ]`
 
 I build systems-level software where correctness and security aren't negotiable — primarily in Rust, with a focus on cybersecurity tooling, backend infrastructure, and AI systems. My workflow is Linux-first, minimal, and hardened by default.
 
 I care more about a system being small enough to fully understand than about it being feature-complete. Most of what I build starts as a narrow, correct core, then earns additional scope only once that core has been tested and broken on purpose.
 
----
-
-## How I Work
+## `[ PROFILE: METHOD ]`
 
 1. **Build** the smallest version that proves the core idea works
 2. **Test** it against real inputs, not assumptions
@@ -48,11 +64,9 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 - Memory-safe by default, defensive by design
 - If it can't be explained simply, it isn't finished
 
----
+## `[ TOOLCHAIN: STACK ]`
 
-## Stack
-
-<div>
+<div align="center">
 
 <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -72,31 +86,9 @@ Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
 
 </div>
 
----
+## `[ CONTACT: LINKS ]`
 
-## GitHub Stats
-
-<div align="center">
-
-<img src="./profile-stats.svg" width="520" alt="Profile stats and top languages" />
-
-</div>
-
----
-
-## Currently Working On
-
-Building the CVE scanning engine's storage layer and finishing the WiFi diagnostic toolkit's rogue-AP detection module. Longer term: shipping more of the AI orchestration layer as a standalone, reusable tool.
-
----
-
-## Contributing
-
-Pull requests are welcome when they improve clarity, security, or performance, and include clear justification for the change. Issues without a reproducible case or a clear proposed fix are unlikely to be prioritized.
-
----
-
-## Contact
+Pull requests are welcome when they improve clarity, security, or performance, with clear justification for the change. Issues without a reproducible case or a proposed fix are unlikely to be prioritized.
 
 <div align="center">
 
