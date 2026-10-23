@@ -1,6 +1,6 @@
 {
   "username": "Mr-IR0k-oo1",
-  "fetched_at": "2026-10-22T11:56:39.717834+00:00",
+  "fetched_at": "2026-10-23T11:42:26.617130+00:00",
   "user": {
     "name": "Irok_001",
     "bio": null,
@@ -16,10 +16,10 @@
     "total_forks": 5
   },
   "languages": {
-    "TypeScript": 4386825,
-    "Rust": 5011177,
+    "Rust": 5602513,
+    "TypeScript": 4475226,
+    "JavaScript": 567872,
     "Python": 824723,
-    "JavaScript": 384946,
     "Shell": 87056,
     "CSS": 368070,
     "PowerShell": 9820,
