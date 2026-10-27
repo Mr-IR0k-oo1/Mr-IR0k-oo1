@@ -80,11 +80,11 @@ text {
   <text x="20" y="262" font-size="11" fill="#427819" font-weight="bold">    Makefile</text>
   <text x="170" y="262" font-size="11" fill="var(--dim)">40.5%</text>
   <rect x="20" y="272" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="272" width="105.4" height="6" fill="#427819" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="272" width="105.2" height="6" fill="#427819" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="290" font-size="11" fill="#dea584" font-weight="bold">        Rust</text>
-  <text x="170" y="290" font-size="11" fill="var(--dim)">25.8%</text>
+  <text x="170" y="290" font-size="11" fill="var(--dim)">25.9%</text>
   <rect x="20" y="300" width="260" height="6" fill="var(--surface)"/>
-  <rect x="20" y="300" width="67.1" height="6" fill="#dea584" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
+  <rect x="20" y="300" width="67.3" height="6" fill="#dea584" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/></rect>
   <text x="20" y="318" font-size="11" fill="#3178c6" font-weight="bold">  TypeScript</text>
   <text x="170" y="318" font-size="11" fill="var(--dim)">20.8%</text>
   <rect x="20" y="328" width="260" height="6" fill="var(--surface)"/>
