@@ -1,97 +1,42 @@
 #!/usr/bin/env python3
-"""Shared theme CSS for all profile SVGs — adapts to GitHub light/dark mode.
+"""Shared theme CSS for profile SVGs — adapts to GitHub light/dark mode.
 
 GitHub strips external CSS from READMEs but renders inline <style> inside
-embedded SVGs, including @media (prefers-color-scheme). Defining the whole
-palette as CSS custom properties lets every card flip theme automatically.
+embedded SVGs, including @media (prefers-color-scheme). Defining the palette
+as CSS custom properties lets every card follow the viewer's theme.
 
-DARK matches the industrial-brutalist "tactical telemetry" palette used by
-the info/workspace/heatmap cards; LIGHT is a blueprint-paper adaptation.
+The palette mirrors GitHub's own UI neutrals and contribution greens so the
+cards read as native to the profile page.
 """
 
 DARK = {
-    "--bg":            "#0B0C10",  # Deep space/charcoal technical background
-    "--surface":       "#10131B",  # Inner card / project box fill
-    "--border":        "#1F2430",  # Dark steel grid line
-    "--border-bright": "#3F4D66",  # Active frame highlight
-    "--text":          "#E2E8F0",  # Crisp off-white phosphor text
-    "--dim":           "#5A6578",  # Blueprint slate gray for metadata
-    "--red":           "#FF3E3E",  # Aviation hazard / alarm red
-    "--green":         "#00FF66",  # Matrix phosphor active green
-    "--blue":          "#00F0FF",  # Hyper-cyber blue/teal
-    "--amber":         "#FFB700",  # Tactical warning amber
-    "--yellow":        "#FFB700",  # Alias of amber
-    "--mauve":         "#B388FF",  # High-altitude purple
-    "--peach":         "#FF9E80",  # Sensor-range orange
-    "--pink":          "#FF4081",  # Target-acquired magenta
-    "--teal":          "#00F0FF",  # Alias of hyper-cyber blue
-    # Tactical monochromatic green heat ramp
-    "--cell-0":        "#12151D",  # Inactive deep charcoal
-    "--cell-1":        "#0D3A1F",  # Low-intensity phosphor
-    "--cell-2":        "#145E32",  # Medium-low intensity
-    "--cell-3":        "#218C4A",  # Medium-high intensity
-    "--cell-4":        "#2DBC62",  # High-intensity active
-    "--cell-5":        "#00FF66",  # Maximum activity glow
+    "--bg":     "#0D1117",
+    "--border": "#30363D",
+    "--text":   "#E6EDF3",
+    "--muted":  "#8B949E",
+    "--accent": "#3FB950",
+    "--cell-0": "#161B22",
+    "--cell-1": "#0E4429",
+    "--cell-2": "#006D32",
+    "--cell-3": "#26A641",
+    "--cell-4": "#39D353",
 }
 
 LIGHT = {
-    "--bg":            "#E8ECF1",  # Blueprint paper background
-    "--surface":       "#DCE3EB",  # Inner card / project box fill
-    "--border":        "#B6C0CE",  # Steel grid line
-    "--border-bright": "#6B7A8F",  # Active frame highlight
-    "--text":          "#171B23",  # Dark phosphor text
-    "--dim":           "#5A6578",  # Blueprint slate gray for metadata
-    "--red":           "#C02626",  # Alarm red
-    "--green":         "#00A64E",  # Phosphor active green
-    "--blue":          "#00A6C8",  # Cyber blue/teal
-    "--amber":         "#A87A00",  # Tactical warning amber
-    "--yellow":        "#A87A00",  # Alias of amber
-    "--mauve":         "#7A4DD0",  # High-altitude purple
-    "--peach":         "#C85A2E",  # Sensor-range orange
-    "--pink":          "#C2276A",  # Target-acquired magenta
-    "--teal":          "#00A6C8",  # Alias of cyber blue
-    "--cell-0":        "#E8ECF1",  # Inactive paper
-    "--cell-1":        "#B4E5C0",  # Low-intensity
-    "--cell-2":        "#6CD48A",  # Medium-low intensity
-    "--cell-3":        "#2DB15E",  # Medium-high intensity
-    "--cell-4":        "#1E8A48",  # High-intensity
-    "--cell-5":        "#00A64E",  # Maximum activity
+    "--bg":     "#FFFFFF",
+    "--border": "#D0D7DE",
+    "--text":   "#1F2328",
+    "--muted":  "#656D76",
+    "--accent": "#1A7F37",
+    "--cell-0": "#EBEDF0",
+    "--cell-1": "#9BE9A8",
+    "--cell-2": "#40C463",
+    "--cell-3": "#30A14E",
+    "--cell-4": "#216E39",
 }
 
-
-import os
-
-REDUCE_MOTION = os.environ.get("REDUCE_MOTION", "") == "1"
-
-
-def smil(attribute: str, values: str, dur: str, begin: str | None = None,
-         repeat: str | None = None, extra: str = "") -> str:
-    """Emit a <animate> element, or nothing when motion is reduced.
-
-    SMIL is not controllable via CSS animation rules, so the only honest way to
-    honour prefers-reduced-motion on an <img>-embedded SVG is to not emit it.
-    """
-    if REDUCE_MOTION:
-        return ""
-    attrs = f'attributeName="{attribute}" values="{values}" dur="{dur}"'
-    if begin:
-        attrs += f' begin="{begin}"'
-    if repeat:
-        attrs += f' repeatCount="{repeat}"'
-    if extra:
-        attrs += f" {extra}"
-    return f"<animate {attrs}/>"
-
-
-def fade(begin: str, dur: str = "0.15s", base: str = "0") -> tuple[str, str]:
-    """Return (opacity_attr, animate_el) for a fade-in.
-
-    Under reduced motion the element renders fully opaque with no animation;
-    otherwise it starts at `base` and fades in at `begin`.
-    """
-    if REDUCE_MOTION:
-        return 'opacity="1"', ""
-    return f'opacity="{base}"', smil("opacity", f"{base};1", dur, begin=begin, extra='fill="freeze"')
+FONT = ('-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", '
+        'Helvetica, Arial, sans-serif')
 
 
 def css() -> str:
@@ -100,15 +45,12 @@ def css() -> str:
 
     return f"""<style>
 :root {{
-{block(DARK)} 
+{block(DARK)}
 }}
 @media (prefers-color-scheme: light) {{
 :root {{
-{block(LIGHT)} 
+{block(LIGHT)}
 }}
 }}
-text {{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  letter-spacing: 0.02em;
-}}
+text {{ font-family: {FONT}; }}
 </style>"""

@@ -2,103 +2,53 @@
 
 # Mr-IR0k-oo1
 
-**Systems-focused developer** — Rust, cybersecurity, and AI infrastructure.
+**Systems & Security Engineer** · Rust · Cybersecurity · AI Infrastructure
 
-> Correctness and security are requirements, not features.
-
-</div>
-
-## `[ SYSTEM: IDENTITY ]`
-
-<div align="center">
-
-<img src="./info-card.svg" width="490" alt="System profile — Arch Linux, Neovim + tmux, Rust · Python · TypeScript · Bash; status: actively building CVE storage." />
+<a href="https://ir0k.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-ir0k.vercel.app-24292F?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+<a href="https://github.com/Mr-IR0k-oo1?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_all-24292F?style=flat-square&logo=github&logoColor=white" alt="Repositories" /></a>
 
 </div>
 
-## `[ WORKSPACE: ACTIVE_MODULES ]`
+## About
 
-<div align="center">
+I build systems-level software where correctness and security are requirements, not features — primarily in Rust, with a focus on security tooling, backend infrastructure, and AI systems. I work Linux-first, keep dependencies minimal, and prefer systems small enough to understand completely.
 
-<img src="./workspace-card.svg" width="490" alt="Active projects — cve-scanner, wifi-diag, ai-orchestrator, sdr-tracker." />
+## Current Work
 
-</div>
+| Project | Description | Stack | Status |
+| --- | --- | --- | --- |
+| **cve-scanner** | CVE correlation engine with NVD and EPSS risk scoring | Rust | Active |
+| **wifi-diag** | 802.11 diagnostics toolkit with rogue access point detection | Python | Active |
+| **ai-orchestrator** | Shared memory layer for multi-CLI AI agents | Rust | Planned |
+| **sdr-tracker** | SGP4 orbital propagation and IQ signal processing pipeline | Rust | Planned |
 
-Currently winding up the CVE scanning engine's storage layer and the WiFi diagnostic toolkit's rogue-AP detection module. Longer term: shipping more of the AI orchestration layer as a standalone, reusable tool.
+## Approach
 
-## `[ ACTIVITY: LAST_52_WEEKS ]`
+1. **Build** the smallest version that proves the core idea.
+2. **Test** it against real inputs, not assumptions.
+3. **Break** it deliberately — adversarial input, edge cases, resource exhaustion.
+4. **Harden** it based on what actually failed.
 
-<div align="center">
+Correctness before performance, performance before convenience. Memory-safe by default, defensive by design.
 
-<img src="./contrib-heatmap.svg" width="860" alt="Contribution heatmap — 1,206 contributions over the past 52 weeks, current streak 65 days." />
+## Tech Stack
 
-</div>
+<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" alt="Bash" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white" alt="Arch Linux" />
+<img src="https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Neovim" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 
-## `[ TELEMETRY: ACCOUNT ]`
+## Activity
 
-<div align="center">
+<img src="./contrib-heatmap.svg" width="100%" alt="Contribution activity over the last year, including current and longest streaks." />
 
-<img src="./profile-stats.svg" width="520" alt="Account telemetry — 45 public repositories; top languages Makefile, Rust, TypeScript, HTML, Python." />
+## Collaboration
 
-</div>
-
-## `[ PROFILE: ABOUT ]`
-
-I build systems-level software where correctness and security aren't negotiable — primarily in Rust, with a focus on cybersecurity tooling, backend infrastructure, and AI systems. My workflow is Linux-first, minimal, and hardened by default.
-
-I care more about a system being small enough to fully understand than about it being feature-complete. Most of what I build starts as a narrow, correct core, then earns additional scope only once that core has been tested and broken on purpose.
-
-## `[ PROFILE: METHOD ]`
-
-1. **Build** the smallest version that proves the core idea works
-2. **Test** it against real inputs, not assumptions
-3. **Break** it deliberately — adversarial input, edge cases, resource exhaustion
-4. **Harden** based on what actually broke, not what might
-
-Nothing ships past step 3. If I haven't tried to break it, I don't trust it.
-
-**Working principles**
-
-- Correctness before performance, performance before convenience
-- Minimal dependencies, explainable architecture
-- Memory-safe by default, defensive by design
-- If it can't be explained simply, it isn't finished
-
-## `[ TOOLCHAIN: STACK ]`
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
-<br/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
-<br/>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
-<img src="https://img.shields.io/badge/Arch%20Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white" />
-<img src="https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" />
-<img src="https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-
-</div>
-
-## `[ CONTACT: LINKS ]`
-
-Pull requests are welcome when they improve clarity, security, or performance, with clear justification for the change. Issues without a reproducible case or a proposed fix are unlikely to be prioritized.
-
-<div align="center">
-
-<a href="https://github.com/Mr-IR0k-oo1"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
-<a href="https://ir0k.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white" /></a>
-
-</div>
-
----
-
-<div align="center">
-<sub>Actively iterating — expect refactors.</sub>
-</div>
+Contributions that improve clarity, security, or performance are welcome. Please include a reproducible case or a proposed fix with your issue or pull request.
