@@ -6,6 +6,9 @@
 
 <a href="https://ir0k.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-ir0k.vercel.app-24292F?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
 <a href="https://github.com/Mr-IR0k-oo1?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_all-24292F?style=flat-square&logo=github&logoColor=white" alt="Repositories" /></a>
+<a href="https://www.linkedin.com/in/kishanth-r/"><img src="https://img.shields.io/badge/LinkedIn-kishanth--r-0A66C2?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPg%3D%3D" alt="LinkedIn" /></a>
+<a href="https://x.com/RKisanth"><img src="https://img.shields.io/badge/X-@RKisanth-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+<a href="https://www.instagram.com/ir0k_oo1/"><img src="https://img.shields.io/badge/Instagram-ir0k__oo1-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" /></a>
 
 </div>
 
@@ -33,10 +36,12 @@ Correctness before performance, performance before convenience. Memory-safe by d
 
 ## Tech Stack
 
+<div align="center">
+
 <table>
 <tr>
-<td><b>Languages</b></td>
-<td>
+<td align="center"><b>Languages</b></td>
+<td align="center">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=rust,py,ts,bash&perline=8&theme=light" />
   <img src="https://skillicons.dev/icons?i=rust,py,ts,bash&perline=8&theme=dark" height="40" alt="Rust, Python, TypeScript, Bash" />
@@ -44,8 +49,8 @@ Correctness before performance, performance before convenience. Memory-safe by d
 </td>
 </tr>
 <tr>
-<td><b>Backend &amp; Data</b></td>
-<td>
+<td align="center"><b>Backend &amp; Data</b></td>
+<td align="center">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=fastapi,postgres,sqlite,docker&perline=8&theme=light" />
   <img src="https://skillicons.dev/icons?i=fastapi,postgres,sqlite,docker&perline=8&theme=dark" height="40" alt="FastAPI, PostgreSQL, SQLite, Docker" />
@@ -53,8 +58,8 @@ Correctness before performance, performance before convenience. Memory-safe by d
 </td>
 </tr>
 <tr>
-<td><b>Environment</b></td>
-<td>
+<td align="center"><b>Environment</b></td>
+<td align="center">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=linux,arch,neovim,git&perline=8&theme=light" />
   <img src="https://skillicons.dev/icons?i=linux,arch,neovim,git&perline=8&theme=dark" height="40" alt="Linux, Arch Linux, Neovim, Git" />
@@ -62,6 +67,8 @@ Correctness before performance, performance before convenience. Memory-safe by d
 </td>
 </tr>
 </table>
+
+</div>
 
 ## Activity
 
