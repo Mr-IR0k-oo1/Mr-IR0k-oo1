@@ -33,17 +33,35 @@ Correctness before performance, performance before convenience. Memory-safe by d
 
 ## Tech Stack
 
-<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" alt="Bash" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white" alt="Arch Linux" />
-<img src="https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Neovim" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+<table>
+<tr>
+<td><b>Languages</b></td>
+<td>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=rust,py,ts,bash&perline=8&theme=light" />
+  <img src="https://skillicons.dev/icons?i=rust,py,ts,bash&perline=8&theme=dark" height="40" alt="Rust, Python, TypeScript, Bash" />
+</picture>
+</td>
+</tr>
+<tr>
+<td><b>Backend &amp; Data</b></td>
+<td>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=fastapi,postgres,sqlite,docker&perline=8&theme=light" />
+  <img src="https://skillicons.dev/icons?i=fastapi,postgres,sqlite,docker&perline=8&theme=dark" height="40" alt="FastAPI, PostgreSQL, SQLite, Docker" />
+</picture>
+</td>
+</tr>
+<tr>
+<td><b>Environment</b></td>
+<td>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=linux,arch,neovim,git&perline=8&theme=light" />
+  <img src="https://skillicons.dev/icons?i=linux,arch,neovim,git&perline=8&theme=dark" height="40" alt="Linux, Arch Linux, Neovim, Git" />
+</picture>
+</td>
+</tr>
+</table>
 
 ## Activity
 
